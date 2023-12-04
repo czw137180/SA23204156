@@ -1,0 +1,118 @@
+---
+title: "Homework-2023.10.30"
+author: "By SA23204156 程张伟"
+date: "2023-11-01"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Homework-2023.10.30}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+   
+## Overview  
+   
+The content is the homework of the course.
+
+
+## Question  
+   
+Proof the Stationarity of Metropolis-Hastings sampler Algorithm in continuous situation.
+
+   
+## Answer   
+$i=j时,显然成立.$   
+$i\neq j时,$   
+$K(s,r)f(s)=g(r|s)f(s)min\{\frac{f(r)g(s|r)}{f(s)g(r|s)},1\}$   
+$=min\{f(r)g(s|r),f(s)g(r|s)\}=g(s|r)f(r)min\{\frac{f(s)g(r|s)}{f(r)g(s|r)},1\}$   
+$=K(r,s)f(r)$    
+    
+    
+## Question  
+   
+ex8.1   Implement the two-sample Cramer-von Mises test for equal distributions   
+as a permutation test. Apply the test to the data in Examples 8.1 and 8.2.
+
+   
+## Answer   
+
+```{r,eval=FALSE}
+f1 <- function(x, y){
+  mean(y <= x)
+}
+
+cvm <- function(x, y){
+  W <- 0
+  n <- length(x)
+  m <- length(y)
+  for (i in 1:n) {
+    W <- W + (f1(x[i], x) - f1(x[i], y))^2
+  }
+  for (j in 1:m) {
+    W <- W + (f1(y[j], x) - f1(y[j], y))^2
+  }
+  m*n/(m+n)^2*W
+}
+```  
+   
+```{r,eval=FALSE}
+x <- c(158 ,171 ,193 ,199 ,230 ,243 ,248 ,248 ,250 ,267 ,271 ,316 ,327 ,329)
+y <- c(141 ,148 ,169 ,181 ,203 ,213 ,229 ,244 ,257 ,260 ,271 ,309)
+T.hat <- cvm(x,y)
+B <- 1000
+z <- c(x,y)
+Tstar <- numeric(B)
+for (i in 1:B) {
+  k <- sample(1:length(z), size = length(x), replace = F)
+  x1 <- z[k]
+  y1 <- z[-k]
+  Tstar[i] <- cvm(x1, y1)
+}
+p <- mean(c(T.hat, Tstar) >= T.hat)
+p
+```
+   
+从上面的估计的p值,我们认为例8.1中的分布差异是不显著的.   
+    
+## Question  
+   
+ex8.3    The Count 5 test for equal variances in Section 6.4 is based on the maximum
+number of extreme points. Example 6.15 shows that the Count 5 criterion
+is not applicable for unequal sample sizes. Implement a permutation test for
+equal variance based on the maximum number of extreme points that applies
+when sample sizes are not necessarily equal.
+
+    
+## Answer    
+    
+```{r,eval=FALSE}
+count5test <- function(x, y){
+  X <- x - mean(x)
+  Y <- y - mean(y)
+  outx <- sum(X > max(Y)) + sum(X < min(Y))
+  outy <- sum(Y > max(X)) + sum(Y < min(X))
+  return(max(c(outx, outy)))
+}
+n1 <- 20
+n2 <- 30
+mu1 <- mu2 <- 0
+sigma1 <- sigma2 <- 1
+m <- 10000
+x <- rnorm(n1, mu1, sigma1)
+y <- rnorm(n2, mu2, sigma2)
+count.hat <- count5test(x,y)
+z <- c(x,y)
+countstar <- numeric(m)
+for (i in 1:m) {
+  k <- sample(1:length(z), size = length(x), replace = F)
+  x1 <- z[k]
+  y1 <- z[-k]
+  countstar[i] <- count5test(x1,y1)
+}
+p <- mean(c(count.hat, countstar) >= count.hat)
+p
+```
+     
+从置换检验的结果,p值很大.和预期结果一致.
+
+
+

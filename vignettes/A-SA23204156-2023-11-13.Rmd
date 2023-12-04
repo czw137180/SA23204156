@@ -1,0 +1,133 @@
+---
+title: "Homework-2023.11.13"
+author: "By SA23204156 程张伟"
+date: "2023-11-16"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Homework-2023.11.13}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+   
+## Overview  
+   
+The content is the homework of the course.
+
+```{r,eval=FALSE}
+library(boot)
+```
+## Question  
+   
+$X_1,\cdots,X_n服从Exp(\lambda).观测值为(u_i,v_i)$   
+$(1)分别用极大化似然和EM算法求解\lambda的MLE,证明算法收敛于观测数据的MLE,且有线性收敛速度.$   
+$(2)观测值分别为(11,12),(8,9),(27,28),(13,14),(16,17),(0,1),(23,24),(10,11),(24,25),(2,3),变成实现上述方法的数值解.$
+
+   
+## Answer   
+ 
+(1)   
+$L(\lambda|u_i,v_i)=\Pi_{i=1}^nP_{\lambda}(u_i\leq X_i\leq v_i)=\Pi_{i=1}^n(e^{-\lambda u_i}-e^{-\lambda v_i})$   
+$l(\lambda|u_i,v_i)=\sum_{i=1}^n[-\lambda u_i+\log(1-e^{\lambda(u_i-v_i)})]$
+$l^\prime(\lambda|u_i,v_i)=\sum_{i=1}^n[-u_i+\frac{(u_i-v_i)\exp(\lambda(u_i-v_i))}{\exp(\lambda(u_i-v_i))-1}]$   
+$直接极大化似然函数即l^\prime(\lambda)=0的解$   
+$假设真实数据为X^{(m)}=(X^{(m)}_1,\cdots,X^{(m)}_n)$   
+$则l(\lambda|u_i,v_i,X^{(m)})=n\log(\lambda)-\lambda\sum_{i=1}^n x^{(m)}_i$   
+$E_{\lambda_0}[l(\lambda|u_i,v_i,X^{(m)})|u_i,v_i]=n\log(\lambda)-\lambda\sum_{i=1}^n[u_i+\frac{1}{\hat{\lambda_0}}-\frac{(u_i-v_i)\exp(\hat{\lambda_0}(u_i-v_i))}{\exp(\hat{\lambda_0}(u_i-v_i))-1}]$   
+$可知\hat{\lambda_1}=\frac{n}{\sum_{i=1}^n[u_i+\frac{1}{\hat{\lambda_0}}-\frac{(u_i-v_i)\exp(\hat{\lambda_0}(u_i-v_i))}{\exp(\hat{\lambda_0}(u_i-v_i))-1}]}$   
+$将上面的\hat{\lambda_0}和\hat{\lambda_1}均替换成\lambda.则可知收敛值应满足与直接极大化似然函数求导后相同的结果，因此EM算法收敛到观测数据的MLE$  
+$记f(x)=\frac{n}{\sum_{i=1}^n[u_i+\frac{1}{x}-\frac{(u_i-v_i)\exp(x(u_i-v_i))}{\exp(x(u_i-v_i))-1}]}$
+$则f^\prime(\lambda_{\infty})=1-n^{-1}\lambda_{\infty}^2\sum_{i=1}^n\frac{(u_i-v_i)^2\exp(\lambda_{\infty}(u_i-v_i))}{(\exp(\lambda_{\infty}(u_i-v_i)))^2},即0<f^\prime(\lambda_{\infty})<1,因此具有线性收敛速度.$   
+   
+(2)   
+注意到观测到的数据均为$u_i-v_i=-1$,   
+$l^\prime(\lambda|u_i,v_i)=-\sum_{i=1}^nu_i-\frac{n\exp(-\lambda)}{\exp(-\lambda)-1}$
+```{r,eval=FALSE}
+u <- c(11,8,27,13,16,0,23,10,24,2)
+t <- sum(u)
+f <- function(x) -t-10*exp(-x)/(exp(-x)-1)
+s1 <- uniroot(f, interval = c(0.0001,10))
+s1$root
+```
+
+```{r,eval=FALSE}
+lambda0 <- 0
+lambda1 <- 1
+k <- 0
+while (lambda1 - lambda0 > 0.00001 | k<10000) {
+  lambda0 <- lambda1
+  lambda1 <- 10/(t+10/lambda0+10*exp(-lambda0)/(exp(-lambda0)-1))
+    k <- k+1
+}
+lambda1
+```
+   
+从上面两种方法来看直接求解和利用EM算法求解的结果是一致的.   
+    
+## Question  
+   
+ex 11.8   
+In the Morra game, the set of optimal strategies are not changed if a constant
+is subtracted from every entry of the payoff matrix, or a positive constant
+is multiplied times every entry of the payoff matrix. However, the simplex
+algorithm may terminate at a different basic feasible point (also optimal).
+Compute B <- A + 2, find the solution of game B, and verify that it is one
+of the extreme points (11.12)–(11.15) of the original game A. Also find the
+value of game A and game B
+
+   
+## Answer    
+   
+```{r,eval=FALSE}
+solve.game <- function(A) {
+min.A <- min(A)
+A <- A - min.A 
+max.A <- max(A)
+A <- A / max(A)
+m <- nrow(A)
+n <- ncol(A)
+it <- n^3
+a <- c(rep(0, m), 1) 
+A1 <- -cbind(t(A), rep(-1, n)) 
+b1 <- rep(0, n)
+A3 <- t(as.matrix(c(rep(1, m), 0))) 
+b3 <- 1
+sx <- simplex(a=a, A1=A1, b1=b1, A3=A3, b3=b3,
+maxi=TRUE, n.iter=it)
+
+a <- c(rep(0, n), 1) 
+A1 <- cbind(A, rep(-1, m)) 
+b1 <- rep(0, m)
+A3 <- t(as.matrix(c(rep(1, n), 0))) 
+b3 <- 1
+sy <- simplex(a=a, A1=A1, b1=b1, A3=A3, b3=b3,
+maxi=FALSE, n.iter=it)
+soln <- list("A" = A * max.A + min.A,
+"x" = sx$soln[1:m],
+"y" = sy$soln[1:n],
+"v" = sx$soln[m+1] * max.A + min.A)
+soln
+}
+```
+   
+```{r,eval=FALSE}
+A <- matrix(c( 0,-2,-2,3,0,0,4,0,0,
+               2,0,0,0,-3,-3,4,0,0,
+               2,0,0,3,0,0,0,-4,-4,
+               -3,0,-3,0,4,0,0,5,0,
+               0,3,0,-4,0,-4,0,5,0,
+               0,3,0,0,4,0,-5,0,-5,
+               -4,-4,0,0,0,5,0,0,6,
+               0,0,4,-5,-5,0,0,0,6,
+               0,0,4,0,0,5,-6,-6,0), 9, 9)
+s <- solve.game(A+3)
+round(cbind(s$x, s$y), 7)
+```
+   
+从结果可以看出在将A替换成A+3后结果依然是(0, 0, 25/61, 0, 20/61, 0, 16/61, 0, 0)的形式.   
+   
+```{r,eval=FALSE}
+s2 <- solve.game(A)
+rbind(A = s2$v,B = s$v)
+```
+   
+游戏A的value为0;将收益+3后,游戏B的收益相应的变为了3.
