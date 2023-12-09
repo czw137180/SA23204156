@@ -1,0 +1,128 @@
+---
+title: "Homework-2023.10.16"
+author: "By SA23204156 程张伟"
+date: "2023-10-18"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Homework-2023.10.16}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+   
+## Overview  
+   
+The content is the homework of the course.
+
+```{r,eval=FALSE}
+library(bootstrap)
+```
+
+## Question  
+   
+考虑m=1000个假设,其中前95%为原假设成立,后5%对立假设成立.原假设下p值服从U(0,1),对立假设下为Beta(0.1,1),
+分别用Bonferroni和B-H矫正p值,在0.1的显著性水平下进行10000次模拟
+   
+## Answer
+   
+```{r,eval=FALSE}
+m <- 1000
+M <- 10000
+FWER.bonf <- FDR.bonf <- TPR.bonf <- numeric(M)
+FWER.bh <- FDR.bh <- TPR.bh <- numeric(M)
+for (i in 1:M) {
+  p <- numeric(1000)
+  p[1:950] <- runif(950)
+  p[951:1000] <- rbeta(50, 0.1, 1)
+  p.bonf <- p.adjust(p, method = 'bonferroni')
+  p.bh <- p.adjust(p, method = 'fdr')
+  FWER.bonf[i] <- max(p.bonf[1:950] < 0.1)
+  FDR.bonf[i] <- sum(p.bonf[1:950] < 0.1)/sum(p.bonf < 0.1)
+  TPR.bonf[i] <- sum(p.bonf[951:1000] < 0.1)/50
+  FWER.bh[i] <- max(p.bh[1:950] < 0.1)
+  FDR.bh[i] <- sum(p.bh[1:950] < 0.1)/sum(p.bh < 0.1)
+  TPR.bh[i] <- sum(p.bh[951:1000] < 0.1)/50
+}
+d <- data.frame(FWER=c(mean(FWER.bonf),mean(FWER.bh)), FDR=c(mean(FDR.bonf),mean(FDR.bh)), TPR=c(mean(TPR.bonf),mean(TPR.bh)))
+row.names(d) <- c('Bonf', 'B-H')
+d
+```
+
+从表格中呈现的结果我们可以看到和预期一致.Bonf的FWER接近0.1,B—H的FWER远大于0.1;Bonf的FWER远小于0.1,B-H的FDR接近0.1;TPR中B-H大于Bonf.   
+   
+## Question  
+   
+总体服从指数分布$exp(\lambda)$,$\lambda$的MLE即$\hat{\lambda}=\frac{1}{\overline{X}}$,理论偏差和标准差分别为$\lambda /(n-1)$,$n\lambda/[(n-1)\sqrt{n-2}]$.用Bootstrap方法进行模拟.   
+
+   
+## Answer   
+   
+$\lambda=2,样本量n分别取5,10,20$   
+   
+
+```{r,eval=FALSE}
+lambda <- 2
+B <- 1000
+m <- 1000
+bias1 <- sd1 <- numeric(m)
+bias2 <- sd2 <- numeric(3)
+bias3 <- sd3 <- numeric(3)
+k <- 1
+for (n in c(5,10,20)) {
+  for (i in 1:m) {
+    B <- 1000
+    lambdastar <- numeric(B)
+    x <- rexp(n, lambda)
+    lambdahat <- 1/mean(x)
+    for (j in 1:B) {
+      xstar <- sample(x, replace = T)
+      lambdastar[j] <- 1/mean(xstar)
+    }
+    bias1[i] <- mean(lambdastar) - lambdahat
+    sd1[i] <- sd(lambdastar)
+  }
+  bias2[k] <- mean(bias1)
+  sd2[k] <- mean(sd1)
+  bias3[k] <- lambda/(n-1)
+  sd3[k] <- n*lambda/(n-1)/sqrt(n-2)
+  k <- k+1
+}
+d2 <- data.frame(bias.bootstrap = bias2, bias.theoretical = bias3, sd.bootstrap = sd2, sd.theoretical = sd3)
+row.names(d2) <- c('n=5', 'n=10', 'n=20')
+d2
+```
+   
+从模拟结果来看随着样本量的增大bootstrap的偏差和标准差也越发接近理论的偏差和标准差.   
+   
+## Question  
+   
+ex 7.3   
+Obtain a bootstrap t confidence interval estimate for the correlation statistic in Example 7.2
+
+   
+## Answer    
+   
+```{r,eval=FALSE}
+B <- 200
+n <- nrow(law)
+R <- numeric(B)
+r <- se <- t <- numeric(1000)
+corrhat <- cor(law$LSAT, law$GPA)
+for (j in 1:1000) {
+  for (b in 1:B) {
+    i <- sample(1:n, size = n, replace = T)
+    LSAT <- law$LSAT[i]
+    GPA <- law$GPA[i]
+    R[b] <- cor(LSAT, GPA)
+  }
+  r[j] <- mean(R)
+  se[j] <- sd(R)
+  t[j] <- (r[j] - corrhat)/se[j]
+}
+sehat <- mean(se)
+QT <- quantile(t, c(0.05/2, 1-0.05/2), type = 1)
+names(QT) <- rev(names(QT))
+CI <- rev(corrhat - QT*sehat)
+CI
+```
+
+以上即为所求的t置信区间

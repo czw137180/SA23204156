@@ -1,0 +1,82 @@
+---
+title: "Homework-2023.09.25"
+author: "By SA23204156 程张伟"
+date: "2023-09-25"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Homework-2023.09.25}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+   
+## Overview  
+   
+The content is the homework of the course.
+
+## Question  
+  
+投针问题的证明和Monte Carlo模拟  
+   
+## Answer   
+   
+$pf:$   
+$\hat{p}=\frac{\sum_{i=1}^{m}I(\frac{l}{2}sin(Y)\geq X)}{m},则\hat{p}的渐近方差为\frac{p(1-p)}{m}$   
+$由\delta法可知\hat{\pi}的渐近方差为\frac{4l^2(1-p)}{md^2p^3},而p=\frac{2\rho}{\pi}$   
+$则可知渐近方差为\frac{\pi^3}{2m}(\frac{1}{\rho}-\frac{2}{\pi})$   
+$由于l \leq d,故要是方差最小即\rho最大,故\rho=1$   
+   
+### 模拟   
+   
+```{r,eval=FALSE}
+l <- c(0.5,0.8,1)
+d <- 1
+m <- 1e4
+v <- numeric(3)
+pihat <- numeric(1e6)
+for (i in 1:3) {
+  for (j in 1:1e6) {
+    x <- runif(m,0,d/2)
+    y <- runif(m,0,pi/2)
+    pihat[j] <- 2*l[i]/d/mean(l[i]/2*sin(y)>x)
+  }
+  v[i] <- var(pihat)
+}
+v
+```
+   
+从结果中可以看到在l取0.5,0.8,1的情况下的方差.   
+
+## Question  
+  
+Exercise 5.6    
+control variate approach与常规方法相比的减小的方差比例   
+   
+## Answer  
+  
+$和例 5.7中一样,可以知道普通的MC方法得到的方差为Var(g(U))/m,其中Var(g(u))=Var(e^u)=\frac{e^2-1}{2}-(e-1)^2$   
+$而Cov(e^u,e^{1-u})=E(e)-E(e^u)E(e^{1-u})=e-(e-1)^2$   
+$所以Var(e^u+e^{1-u})=Var(e^u)+V(e^{1-u})+2Cov(e^u,e^{1-u})=e^2-1-2(e-1)^2+2e-2(e-1)^2=-3e^2+10e-5$  
+$从而方差减小的比例为[(\frac{e^2-1}{2}-(e-1)^2)-\frac{-3e^2+10e-5}{4}]/(\frac{e^2-1}{2}-(e-1)^2)=98.38\%$   
+
+   
+   
+   
+## Question  
+  
+Exercise 5.7   
+模拟两种方法得到的样本方差减小的比例与理论计算结果比较   
+   
+## Answer   
+   
+### 模拟   
+```{r,eval=FALSE}
+m <- 1e4
+U <- runif(m)
+T1 <- exp(U)
+T2 <- (exp(U) + exp(1-U))/2
+mean(T1)
+mean(T2)
+(var(T1)-var(T2))/var(T1)
+```
+   
+可以看到摸拟的方差减小比例和Exercise 5.6计算结果一致
