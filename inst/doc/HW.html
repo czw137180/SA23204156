@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta name="author" content="By SA23204156 程张伟" />
+
+<meta name="date" content="2023-09-19" />
+
+<title>Homework</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Homework</h1>
+<h4 class="author">By SA23204156 程张伟</h4>
+<h4 class="date">2023-09-19</h4>
+
+
+
+<div id="overview" class="section level2">
+<h2>Overview</h2>
+<p>The content is the homework of the course.</p>
+</div>
+<div id="question" class="section level2">
+<h2>Question</h2>
+<p>Exercise 3.2</p>
+</div>
+<div id="answer" class="section level2">
+<h2>Answer</h2>
+<p>根据密度函数可知拉普拉斯分布的分布函数为 <span class="math display">\[
+F(x)=\left\{
+\begin{aligned}
+\frac12e^x   &amp;&amp;x&lt;0\\
+1-\frac12e^{-x} &amp;&amp;x\geq0\\
+\end{aligned}
+\right.
+\]</span></p>
+<p>根据逆变换法生成样本</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">1000</span>) <span class="co">#生成均匀分布样本</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>x1 <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>x1[<span class="fu">which</span>(u<span class="sc">&lt;</span><span class="fl">0.5</span>)] <span class="ot">&lt;-</span> <span class="fu">log</span>(<span class="dv">2</span><span class="sc">*</span>u[<span class="fu">which</span>(u<span class="sc">&lt;</span><span class="fl">0.5</span>)])   </span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>x1[<span class="fu">which</span>(u<span class="sc">&gt;=</span><span class="fl">0.5</span>)] <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log</span>(<span class="dv">2-2</span><span class="sc">*</span>u[<span class="fu">which</span>(u<span class="sc">&gt;=</span><span class="fl">0.5</span>)])    <span class="co">#利用逆变换得到Laplace分布的样本</span></span></code></pre></div>
+<p>将生成的样本与实际分布比较</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu">hist</span>(x1, <span class="at">prob =</span> <span class="cn">TRUE</span>, <span class="at">main =</span> <span class="fu">expression</span>(<span class="fu">f</span>(x)<span class="sc">==</span><span class="fu">frac</span>(<span class="dv">1</span>,<span class="dv">2</span>)<span class="sc">*</span>e<span class="sc">^</span>(<span class="sc">-</span><span class="fu">abs</span>(x))))</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">curve</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">2</span><span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span><span class="fu">abs</span>(x)), <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">add =</span> <span class="cn">TRUE</span>, <span class="at">lwd =</span><span class="dv">2</span>)</span></code></pre></div>
+</div>
+<div id="question-1" class="section level2">
+<h2>Question</h2>
+<p>Exercise 3.7</p>
+</div>
+<div id="answer-1" class="section level2">
+<h2>Answer</h2>
+<p>Beta(a,b)的密度函数为<span class="math inline">\(f(x)=\frac{1}{B(a,b)}x^{a-1}(1-x)^{b-1}\)</span>,可以知道<span class="math inline">\(x^{a-1}(1-x)^{b-1}\)</span>最大值为<span class="math inline">\(\frac{(a-1)^{a-1}(b-1)^{b-1}}{(a+b-2)^{a+b-2}}\)</span>,因此可以选择接受拒绝法中的c为<span class="math inline">\(\frac{1}{B(a,b)}\frac{(a-1)^{a-1}(b-1)^{b-1}}{(a+b-2)^{a+b-2}}\)</span>,g(x)选取[0,1]上的均匀分布,从而相应的<span class="math inline">\(\rho(x)=\frac{f(x)}{cg(x)}\)</span>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>my.rbeta <span class="ot">&lt;-</span> <span class="cf">function</span>(a,b,n){<span class="co"># Beta分布的参数和样本量</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>  k <span class="ot">&lt;-</span> <span class="dv">0</span>                    <span class="co">#k用来控制生成的样本量</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n)           <span class="co">#用来储存生成的样本</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  <span class="cf">while</span> (k <span class="sc">&lt;</span> n) {</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>    u <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">1</span>) <span class="co">#生成均匀分布</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>    y <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">1</span>) <span class="co">#生成g(x)的样本</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>    c <span class="ot">&lt;-</span> (a<span class="dv">-1</span>)<span class="sc">^</span>(a<span class="dv">-1</span>)<span class="sc">*</span>(b<span class="dv">-1</span>)<span class="sc">^</span>(b<span class="dv">-1</span>)<span class="sc">/</span>((a<span class="sc">+</span>b<span class="dv">-2</span>)<span class="sc">^</span>(a<span class="sc">+</span>b<span class="dv">-2</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    rho_y <span class="ot">&lt;-</span> y<span class="sc">^</span>(a<span class="dv">-1</span>)<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>y)<span class="sc">^</span>(b<span class="dv">-1</span>) <span class="co">#计算rho(y)</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>    <span class="cf">if</span>(u <span class="sc">&lt;=</span> rho_y){  <span class="co">#接受拒绝的过程</span></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>      x[k<span class="sc">+</span><span class="dv">1</span>] <span class="ot">&lt;-</span> y</span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>      k <span class="ot">&lt;-</span> k<span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>    }</span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>  }</span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a>  x                <span class="co">#返回生成的样本</span></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a>}</span></code></pre></div>
+<p>生成Beta(3,2)的样本并比较</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> <span class="fu">my.rbeta</span>(<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1000</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="fu">hist</span>(x2, <span class="at">prob =</span> T, <span class="at">main =</span> <span class="fu">expression</span>(<span class="fu">f</span>(x)<span class="sc">==</span><span class="fu">frac</span>(<span class="dv">1</span>,<span class="fu">B</span>(<span class="dv">3</span>,<span class="dv">2</span>))<span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>x)))</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="fu">curve</span>(<span class="dv">1</span><span class="sc">/</span><span class="fu">beta</span>(<span class="dv">3</span>,<span class="dv">2</span>)<span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>x), <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">add =</span> T, <span class="at">lwd =</span><span class="dv">2</span>)</span></code></pre></div>
+</div>
+<div id="question-2" class="section level2">
+<h2>Question</h2>
+<p>Exercise 3.9</p>
+</div>
+<div id="answer-2" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>my.repane <span class="ot">&lt;-</span> <span class="cf">function</span>(n){  <span class="co">#指定样本量</span></span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n)</span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>  k <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>  <span class="cf">while</span> (k <span class="sc">&lt;</span> n) {    <span class="co">#按照算法得到样本</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>    k <span class="ot">&lt;-</span> k<span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>    u <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">3</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>    <span class="cf">if</span>(<span class="fu">which.max</span>(<span class="fu">abs</span>(u))<span class="sc">==</span><span class="dv">3</span>){</span>
+<span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>      x[k] <span class="ot">&lt;-</span> u[<span class="dv">2</span>]</span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>    } <span class="cf">else</span> </span>
+<span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a>    {</span>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>      x[k] <span class="ot">&lt;-</span> u[<span class="dv">3</span>]</span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a>    }</span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>  }</span>
+<span id="cb5-14"><a href="#cb5-14" tabindex="-1"></a>  x</span>
+<span id="cb5-15"><a href="#cb5-15" tabindex="-1"></a>}</span></code></pre></div>
+<p>生成样本并比较</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>x3 <span class="ot">&lt;-</span> <span class="fu">my.repane</span>(<span class="dv">1000</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="fu">hist</span>(x3, <span class="at">prob =</span> T, <span class="at">main =</span> <span class="fu">expression</span>(<span class="fu">f</span>(x)<span class="sc">==</span><span class="fu">frac</span>(<span class="dv">3</span>,<span class="dv">4</span>)<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">2</span>)))</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="fu">curve</span>(<span class="dv">3</span><span class="sc">/</span><span class="dv">4</span><span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>x<span class="sc">^</span><span class="dv">2</span>), <span class="at">col =</span> <span class="st">&quot;red&quot;</span>, <span class="at">add =</span> T, <span class="at">lwd =</span><span class="dv">2</span>)</span></code></pre></div>
+</div>
+<div id="question-3" class="section level2">
+<h2>Question</h2>
+<p>Exercise 3.10</p>
+</div>
+<div id="answer-3" class="section level2">
+<h2>Answer</h2>
+<p><span class="math inline">\(pf:\)</span><br />
+<span class="math inline">\(假设生成的随机变量为X,则P(X&lt;=x)=P(X&lt;=x|
+|U_3|最大)P(|U_3|最大)+P(X&lt;=x|
+|U_3|不是最大)P(|U_3|不是最大)\)</span><br />
+<span class="math inline">\(由独立性可知P(|U_3|最大)=\frac{1}{3},P(|U_3|不是最大)=\frac{2}{3}\)</span><br />
+<span class="math inline">\(P(X&lt;=x|
+|U_3|最大)=3P(X&lt;=x,|U_3|最大)=3P(U_2\leq
+x,|U_3|\geq|U_2|,|U_3|\geq|U_1|)\)</span><br />
+<span class="math inline">\(若x\geq0,\)</span><br />
+<span class="math inline">\(上式=3(\int_{-1}^{-x}\int_{u_3}^{x}\int_{u_3}^{-u_3}+\int_{-x}^{0}\int_{u_3}^{-u_3}\int_{u3}^{-u_3}+\int_{0}^{x}\int_{-u_3}^{u_3}\int_{-u_3}^{u_3}+\int_{x}^{1}\int_{-u_3}^{x}\int_{-u_3}^{u_3})\frac{1}{8}du_1du_2du_3\)</span><br />
+<span class="math inline">\(=\frac{1}{2}+\frac{3}{4}x-\frac{1}{4}x^3\)</span></p>
+<p><span class="math inline">\(若x&lt;0,\)</span><br />
+<span class="math inline">\(上式=3(\int_{-1}^{x}\int_{u_3}^{x}\int_{u_3}^{-u_3}+\int_{-x}^{1}\int_{-u_3}^{x}\int_{-u_3}^{u_3})\frac{1}{8}du_1du_2du_3\)</span><br />
+<span class="math inline">\(=\frac{1}{2}+\frac{3}{4}x-\frac{1}{4}x^3\)</span><br />
+<span class="math inline">\(综上,P(X&lt;=x|
+|U_3|最大)=\frac{1}{2}+\frac{3}{4}x-\frac{1}{4}x^3\)</span></p>
+<p><span class="math inline">\(P(X&lt;=x|
+|U_3|不是最大)=\frac{3}{2}P(X&lt;=x, |U_3|不是最大)=\frac{3}{2}P(U_3\leq
+x, |U_3|&lt;|U_1|或|U_3|&lt;|U_2|)\)</span><br />
+<span class="math inline">\(由于U_1,U_2地位相同,所以上式=3P(U_3\leq x,
+|U_3|&lt;|U_1|,|U_1|&lt;|U_2|),这就和第一种情况相同\)</span><br />
+<span class="math inline">\(因此P(X&lt;=x|
+|U_3|不是最大)=\frac{1}{2}+\frac{3}{4}x-\frac{1}{4}x^3\)</span></p>
+<p><span class="math inline">\(综上,P(X&lt;=x)=\frac{1}{3}(\frac{1}{2}+\frac{3}{4}x-\frac{1}{4}x^3)+\frac{2}{3}(\frac{1}{2}+\frac{3}{4}x-\frac{1}{4}x^3)=\frac{1}{2}+\frac{3}{4}x-\frac{1}{4}x^3\)</span></p>
+<p><span class="math inline">\(对上述分布函数求导可知,f_X(x)=\frac{3}{4}(1-x^2),即为题中所要求的密度函数,证毕.\)</span></p>
+</div>
+<div id="question-4" class="section level2">
+<h2>Question</h2>
+<p>用逆变换法复现放回情况下的sample函数</p>
+</div>
+<div id="answer-4" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>my.sample <span class="ot">&lt;-</span> <span class="cf">function</span>(x, size, <span class="at">prob =</span> <span class="fu">rep</span>(<span class="dv">1</span>,<span class="fu">length</span>(x))){</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">length</span>(prob)<span class="sc">!=</span><span class="fu">length</span>(x)){   <span class="co"># 判断变量输入是否合理</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a>    <span class="fu">print</span>(<span class="st">&quot;The length of x and prob is not equal!&quot;</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a>  }<span class="cf">else</span></span>
+<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a>  {</span>
+<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    p <span class="ot">&lt;-</span> prob<span class="sc">/</span><span class="fu">sum</span>(prob)</span>
+<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>    cp <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(p)</span>
+<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>    u <span class="ot">&lt;-</span> <span class="fu">runif</span>(size)      <span class="co"># 生成均匀分布</span></span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>    r <span class="ot">&lt;-</span> x[<span class="fu">findInterval</span>(u,cp)<span class="sc">+</span><span class="dv">1</span>]    <span class="co">#逆变换</span></span>
+<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>    <span class="fu">return</span>(r)         <span class="co">#放回所生成的样本</span></span>
+<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>  }</span>
+<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>}</span></code></pre></div>
+<div id="验证函数的正确性" class="section level3">
+<h3>验证函数的正确性:</h3>
+<p>未指定概率即默认等概率抽样
+<code>{,eval=FALSE} x4 &lt;- my.sample(c(1,2,3,4), 1e5)   #不指定权重时生成样本 ct &lt;- as.vector(table(x4))         #统计频率 ct/sum(ct)/rep(0.25,4)             #用比值进行比较每个取值的观测的频率和概率</code></p>
+<p>指定概率但输入的概率程度与总体可能取值的长度不一致</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>x4 <span class="ot">&lt;-</span> <span class="fu">my.sample</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>), <span class="fl">1e5</span>, <span class="fu">c</span>(<span class="dv">1</span>))</span></code></pre></div>
+<p>指定概率且正确输入时</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>prob <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">4</span>, <span class="dv">0</span>, <span class="dv">10</span>)  <span class="co">#随机生成权重</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>p <span class="ot">&lt;-</span> prob<span class="sc">/</span><span class="fu">sum</span>(prob)      <span class="co">#将权重转换为概率</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a>x5 <span class="ot">&lt;-</span> <span class="fu">my.sample</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>), <span class="fl">1e5</span>, <span class="at">prob =</span> prob)   <span class="co">#生成样本</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>ct <span class="ot">&lt;-</span> <span class="fu">as.vector</span>(<span class="fu">table</span>(x5))          <span class="co">#统计频率</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a>ct<span class="sc">/</span><span class="fu">sum</span>(ct)<span class="sc">/</span>p             <span class="co">#用比值进行比较每个取值的观测的频率和概率</span></span></code></pre></div>
+<p>从上述的结果可以看出:当输入不当时,能够识别并报错;未指定概率(默认等概率)以及指定概率时,都可以按照我们所要求的概率进行抽样.</p>
+</div>
+</div>
+<div id="question-5" class="section level2">
+<h2>Question</h2>
+<p>投针问题的证明和Monte Carlo模拟</p>
+</div>
+<div id="answer-5" class="section level2">
+<h2>Answer</h2>
+<p><span class="math inline">\(pf:\)</span><br />
+<span class="math inline">\(\hat{p}=\frac{\sum_{i=1}^{m}I(\frac{l}{2}sin(Y)\geq
+X)}{m},则\hat{p}的渐近方差为\frac{p(1-p)}{m}\)</span><br />
+<span class="math inline">\(由\delta法可知\hat{\pi}的渐近方差为\frac{4l^2(1-p)}{md^2p^3},而p=\frac{2\rho}{\pi}\)</span><br />
+<span class="math inline">\(则可知渐近方差为\frac{\pi^3}{2m}(\frac{1}{\rho}-\frac{2}{\pi})\)</span><br />
+<span class="math inline">\(由于l \leq
+d,故要是方差最小即\rho最大,故\rho=1\)</span></p>
+<div id="模拟" class="section level3">
+<h3>模拟</h3>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>l <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.5</span>,<span class="fl">0.8</span>,<span class="dv">1</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fl">1e4</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">3</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>pihat <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="fl">1e6</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) {</span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fl">1e6</span>) {</span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>    x <span class="ot">&lt;-</span> <span class="fu">runif</span>(m,<span class="dv">0</span>,d<span class="sc">/</span><span class="dv">2</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>    y <span class="ot">&lt;-</span> <span class="fu">runif</span>(m,<span class="dv">0</span>,pi<span class="sc">/</span><span class="dv">2</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>    pihat[j] <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span>l[i]<span class="sc">/</span>d<span class="sc">/</span><span class="fu">mean</span>(l[i]<span class="sc">/</span><span class="dv">2</span><span class="sc">*</span><span class="fu">sin</span>(y)<span class="sc">&gt;</span>x)</span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a>  }</span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>  v[i] <span class="ot">&lt;-</span> <span class="fu">var</span>(pihat)</span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a>}</span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a>v</span></code></pre></div>
+<p>从结果中可以看到在l取0.5,0.8,1的情况下的方差.</p>
+</div>
+</div>
+<div id="question-6" class="section level2">
+<h2>Question</h2>
+<p>Exercise 5.6<br />
+control variate approach与常规方法相比的减小的方差比例</p>
+</div>
+<div id="answer-6" class="section level2">
+<h2>Answer</h2>
+<p><span class="math inline">\(和例
+5.7中一样,可以知道普通的MC方法得到的方差为Var(g(U))/m,其中Var(g(u))=Var(e^u)=\frac{e^2-1}{2}-(e-1)^2\)</span><br />
+<span class="math inline">\(而Cov(e^u,e^{1-u})=E(e)-E(e^u)E(e^{1-u})=e-(e-1)^2\)</span><br />
+<span class="math inline">\(所以Var(e^u+e^{1-u})=Var(e^u)+V(e^{1-u})+2Cov(e^u,e^{1-u})=e^2-1-2(e-1)^2+2e-2(e-1)^2=-3e^2+10e-5\)</span><br />
+<span class="math inline">\(从而方差减小的比例为[(\frac{e^2-1}{2}-(e-1)^2)-\frac{-3e^2+10e-5}{4}]/(\frac{e^2-1}{2}-(e-1)^2)=98.38\%\)</span></p>
+</div>
+<div id="question-7" class="section level2">
+<h2>Question</h2>
+<p>Exercise 5.7<br />
+模拟两种方法得到的样本方差减小的比例与理论计算结果比较</p>
+</div>
+<div id="answer-7" class="section level2">
+<h2>Answer</h2>
+<div id="模拟-1" class="section level3">
+<h3>模拟</h3>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fl">1e4</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>U <span class="ot">&lt;-</span> <span class="fu">runif</span>(m)</span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>T1 <span class="ot">&lt;-</span> <span class="fu">exp</span>(U)</span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>T2 <span class="ot">&lt;-</span> (<span class="fu">exp</span>(U) <span class="sc">+</span> <span class="fu">exp</span>(<span class="dv">1</span><span class="sc">-</span>U))<span class="sc">/</span><span class="dv">2</span></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="fu">mean</span>(T1)</span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a><span class="fu">mean</span>(T2)</span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>(<span class="fu">var</span>(T1)<span class="sc">-</span><span class="fu">var</span>(T2))<span class="sc">/</span><span class="fu">var</span>(T1)</span></code></pre></div>
+<p>可以看到摸拟的方差减小比例和Exercise 5.6计算结果一致</p>
+</div>
+</div>
+<div id="question-8" class="section level2">
+<h2>Question</h2>
+<p>Proof that <span class="math inline">\(Var(\hat{\theta}^S)/Var(\hat{\theta}^M)\rightarrow0\)</span></p>
+</div>
+<div id="answer-8" class="section level2">
+<h2>Answer</h2>
+<p>pf:<br />
+注意到<span class="math inline">\(Var(\hat{\theta}^M)\)</span>与层的选取无关,因此只需证明<span class="math inline">\(Var(\hat{\theta}^S)\rightarrow0\)</span><br />
+<span class="math inline">\(而Var(\hat{\theta}^S)=\frac{1}{Mk}\sum_{i=1}^{k}\sigma_i^2\)</span><br />
+<span class="math inline">\(\sigma_i^2=Var[g(U)|I=i]=\int_{a_i}^{b_i}\frac{1}{b_i-a_i}(g(x)-E[g(U)])^2dx\leq
+N_i^2(其中N_i表示g在第i个区间上最大最小值之差)\)</span><br />
+<span class="math inline">\(而g在[a,b]上是一致连续的,因此\forall\epsilon&gt;0,存在\delta&gt;0,s.t.|x-y|&lt;\delta时,|g(x)-g(y)|&lt;\sqrt{\epsilon}\)</span><br />
+<span class="math inline">\(从而当b_i-a_i&lt;\delta时,N_i^2&lt;\epsilon\Rightarrow
+Var(\hat{\theta}^S)&lt;\frac{\epsilon}{M}&lt;\epsilon\)</span><br />
+<span class="math inline">\(由\epsilon的任意性我们知道结论成立\)</span></p>
+</div>
+<div id="question-9" class="section level2">
+<h2>Question</h2>
+<p>ex5.13<br />
+Find importance functions <span class="math inline">\(f_1\)</span> and
+<span class="math inline">\(f_2\)</span> close to <span class="math inline">\(g(x)=\frac{x^2}{\sqrt{2\pi}}e^{-{x^2}/{2}}\)</span>,
+comparing the variance</p>
+</div>
+<div id="answer-9" class="section level2">
+<h2>Answer</h2>
+<p><span class="math inline">\(f_1=e^{-(x-1)}\)</span>, <span class="math inline">\((x&gt;1)\)</span></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fl">1e6</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>theta.hat <span class="ot">&lt;-</span> se <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">2</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a>g <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a>  x<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">2</span><span class="sc">*</span>pi)<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>x<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="dv">2</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a>}</span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a>f1 <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a>  <span class="fu">exp</span>(<span class="sc">-</span>x<span class="sc">+</span><span class="dv">1</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a>}</span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> <span class="fu">rexp</span>(m)</span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a>theta.hat[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">g</span>(x)<span class="sc">/</span><span class="fu">f1</span>(x))</span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a>se[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">sd</span>(<span class="fu">g</span>(x)<span class="sc">/</span><span class="fu">f1</span>(x))</span></code></pre></div>
+<p><span class="math inline">\(f_2=\sqrt{\frac{2}{\pi}}e^{-(x-1)^2/2}\)</span></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a>f2 <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>  <span class="fu">sqrt</span>(<span class="dv">2</span><span class="sc">/</span>pi)<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>(x<span class="dv">-1</span>)<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="dv">2</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>}</span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">+</span> <span class="fu">abs</span>(<span class="fu">rnorm</span>(m, <span class="dv">1</span>, <span class="dv">1</span>) <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a>theta.hat[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">g</span>(x)<span class="sc">/</span><span class="fu">f2</span>(x))</span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a>se[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">sd</span>(<span class="fu">g</span>(x)<span class="sc">/</span><span class="fu">f2</span>(x))</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="fu">integrate</span>(g, <span class="dv">1</span>, <span class="cn">Inf</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="fu">rbind</span>(theta.hat, se)</span></code></pre></div>
+<p>实际积分结果为0.400626,表中的估计值也较为接近但可以看出第二种的标准差更小，这是因为我们选取的<span class="math inline">\(f_2\)</span>要更为接近<span class="math inline">\(g\)</span>.</p>
+</div>
+<div id="question-10" class="section level2">
+<h2>Question</h2>
+<p>ex5.14<br />
+估计<span class="math inline">\(g(x)=\frac{x^2}{\sqrt{2\pi}}e^{-{x^2}/{2}}\)</span>的积分</p>
+</div>
+<div id="answer-10" class="section level2">
+<h2>Answer</h2>
+<p>在上一题中已经对g(x)的积分做了估计</p>
+</div>
+<div id="question-11" class="section level2">
+<h2>Question</h2>
+<p>ex5.15<br />
+用分层的方法估计<span class="math inline">\(\int_0^1\frac{e^{-x}}{1+x^2}dx\)</span>,并与不分层的方法比较</p>
+</div>
+<div id="answer-11" class="section level2">
+<h2>Answer</h2>
+<p>根据例5.13中可知,不分层的结果中<span class="math inline">\(\hat\theta=0.5257801,标准差为0.0970314\)</span>.现在将区间分为<span class="math inline">\(((j-1)/5,j/5),j=1,2,3,4,5\)</span><br />
+在每个区间上生成数据的密度为<span class="math inline">\(f_j(x)=e^{-x}/\alpha_j,\alpha_j=(e^{-(j-1)/5}-e^{-j/5})/(1-e^{-1})\)</span></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fl">1e4</span></span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">5</span></span>
+<span id="cb16-3"><a href="#cb16-3" tabindex="-1"></a>theta.hat2 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">5</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" tabindex="-1"></a>se2 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">5</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" tabindex="-1"></a>g2 <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb16-6"><a href="#cb16-6" tabindex="-1"></a>  <span class="fu">exp</span>(<span class="sc">-</span>x)<span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span>x<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" tabindex="-1"></a>}</span>
+<span id="cb16-8"><a href="#cb16-8" tabindex="-1"></a>f3 <span class="ot">&lt;-</span> <span class="cf">function</span>(x,j){</span>
+<span id="cb16-9"><a href="#cb16-9" tabindex="-1"></a>  <span class="fu">exp</span>(<span class="sc">-</span>x)<span class="sc">/</span>(<span class="fu">exp</span>(<span class="sc">-</span>(j<span class="dv">-1</span>)<span class="sc">/</span><span class="dv">5</span>)<span class="sc">-</span><span class="fu">exp</span>(<span class="sc">-</span>j<span class="sc">/</span><span class="dv">5</span>))</span>
+<span id="cb16-10"><a href="#cb16-10" tabindex="-1"></a>}</span>
+<span id="cb16-11"><a href="#cb16-11" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) {</span>
+<span id="cb16-12"><a href="#cb16-12" tabindex="-1"></a>  u <span class="ot">&lt;-</span> <span class="fu">runif</span>(m<span class="sc">/</span>k)</span>
+<span id="cb16-13"><a href="#cb16-13" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">log</span>(<span class="fu">exp</span>(<span class="sc">-</span>(j<span class="dv">-1</span>)<span class="sc">/</span><span class="dv">5</span>) <span class="sc">-</span> u<span class="sc">*</span>(<span class="fu">exp</span>(<span class="sc">-</span>(j<span class="dv">-1</span>)<span class="sc">/</span><span class="dv">5</span>)<span class="sc">-</span><span class="fu">exp</span>(<span class="sc">-</span>j<span class="sc">/</span><span class="dv">5</span>)))</span>
+<span id="cb16-14"><a href="#cb16-14" tabindex="-1"></a>  theta.hat2[j] <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">g2</span>(x)<span class="sc">/</span><span class="fu">f3</span>(x,j))</span>
+<span id="cb16-15"><a href="#cb16-15" tabindex="-1"></a>  se2[j] <span class="ot">&lt;-</span> <span class="fu">sd</span>(<span class="fu">g2</span>(x)<span class="sc">/</span><span class="fu">f3</span>(x,j))</span>
+<span id="cb16-16"><a href="#cb16-16" tabindex="-1"></a>}</span>
+<span id="cb16-17"><a href="#cb16-17" tabindex="-1"></a>theta.hat3 <span class="ot">&lt;-</span> <span class="fu">sum</span>(theta.hat2)</span>
+<span id="cb16-18"><a href="#cb16-18" tabindex="-1"></a>se3 <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">/</span>(m<span class="sc">*</span>k)<span class="sc">*</span><span class="fu">sum</span>(se2<span class="sc">^</span><span class="dv">2</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="fu">rbind</span>(theta.hat3, se3)</span></code></pre></div>
+<p>分层的结果估计值依然很准确,但是可以看到标准差明显减小.</p>
+</div>
+<div id="question-12" class="section level2">
+<h2>Question</h2>
+<p>ex6.5<br />
+用MC方法计算t置信区间在卡方分布下的覆盖率</p>
+</div>
+<div id="answer-12" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">20</span></span>
+<span id="cb18-2"><a href="#cb18-2" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb18-3"><a href="#cb18-3" tabindex="-1"></a>UCL <span class="ot">&lt;-</span> LCL <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">1000</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) {</span>
+<span id="cb18-5"><a href="#cb18-5" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">rchisq</span>(n, <span class="at">df =</span> <span class="dv">2</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" tabindex="-1"></a>  UCL[j] <span class="ot">&lt;-</span> <span class="fu">mean</span>(x) <span class="sc">+</span> <span class="fu">sd</span>(x)<span class="sc">/</span><span class="fu">sqrt</span>(n)<span class="sc">*</span><span class="fu">qt</span>(<span class="dv">1</span> <span class="sc">-</span> alpha<span class="sc">/</span><span class="dv">2</span>, <span class="at">df =</span> n<span class="dv">-1</span>)</span>
+<span id="cb18-7"><a href="#cb18-7" tabindex="-1"></a>  LCL[j] <span class="ot">&lt;-</span> <span class="fu">mean</span>(x) <span class="sc">-</span> <span class="fu">sd</span>(x)<span class="sc">/</span><span class="fu">sqrt</span>(n)<span class="sc">*</span><span class="fu">qt</span>(<span class="dv">1</span> <span class="sc">-</span> alpha<span class="sc">/</span><span class="dv">2</span>, <span class="at">df =</span> n<span class="dv">-1</span>)</span>
+<span id="cb18-8"><a href="#cb18-8" tabindex="-1"></a>}</span>
+<span id="cb18-9"><a href="#cb18-9" tabindex="-1"></a><span class="fu">mean</span>(UCL <span class="sc">&gt;</span> <span class="dv">2</span> <span class="sc">&amp;</span> LCL <span class="sc">&lt;</span> <span class="dv">2</span>)</span></code></pre></div>
+<p>从结果可以看出在非正态的情况下覆盖率与0.95有所差距.</p>
+</div>
+<div id="question-13" class="section level2">
+<h2>Question</h2>
+<p>ex6.A<br />
+计算在卡方,均匀和指数分布下t检验的一类错误率是否和名义显著性水平相同</p>
+</div>
+<div id="answer-13" class="section level2">
+<h2>Answer</h2>
+<p><span class="math inline">\(卡方分布\mathcal{X}^2(1)\)</span></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a>error1 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">3</span>) </span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">20</span></span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb19-4"><a href="#cb19-4" tabindex="-1"></a>T1 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">10000</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10000</span>) {</span>
+<span id="cb19-6"><a href="#cb19-6" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">rchisq</span>(n, <span class="at">df =</span> <span class="dv">1</span>)</span>
+<span id="cb19-7"><a href="#cb19-7" tabindex="-1"></a>  T1[j] <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(n)<span class="sc">*</span>(<span class="fu">mean</span>(x) <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">/</span><span class="fu">sd</span>(x) </span>
+<span id="cb19-8"><a href="#cb19-8" tabindex="-1"></a>}</span>
+<span id="cb19-9"><a href="#cb19-9" tabindex="-1"></a>error1[<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">abs</span>(T1) <span class="sc">&gt;</span> <span class="fu">qt</span>(<span class="dv">1</span> <span class="sc">-</span> alpha<span class="sc">/</span><span class="dv">2</span>, <span class="at">df =</span> n<span class="dv">-1</span>))</span></code></pre></div>
+<p><span class="math inline">\(均匀分布U(0,2)\)</span></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">20</span></span>
+<span id="cb20-2"><a href="#cb20-2" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb20-3"><a href="#cb20-3" tabindex="-1"></a>T2 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">10000</span>)</span>
+<span id="cb20-4"><a href="#cb20-4" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10000</span>) {</span>
+<span id="cb20-5"><a href="#cb20-5" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">runif</span>(n, <span class="dv">0</span>, <span class="dv">2</span>)</span>
+<span id="cb20-6"><a href="#cb20-6" tabindex="-1"></a>  T2[j] <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(n)<span class="sc">*</span>(<span class="fu">mean</span>(x) <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">/</span><span class="fu">sd</span>(x) </span>
+<span id="cb20-7"><a href="#cb20-7" tabindex="-1"></a>}</span>
+<span id="cb20-8"><a href="#cb20-8" tabindex="-1"></a>error1[<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">abs</span>(T2) <span class="sc">&gt;</span> <span class="fu">qt</span>(<span class="dv">1</span> <span class="sc">-</span> alpha<span class="sc">/</span><span class="dv">2</span>, <span class="at">df =</span> n<span class="dv">-1</span>))</span></code></pre></div>
+<p><span class="math inline">\(指数分布exp(1)\)</span></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a>n <span class="ot">=</span> <span class="dv">20</span></span>
+<span id="cb21-2"><a href="#cb21-2" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1"></a>T3 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">10000</span>)</span>
+<span id="cb21-4"><a href="#cb21-4" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10000</span>) {</span>
+<span id="cb21-5"><a href="#cb21-5" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">rexp</span>(n)</span>
+<span id="cb21-6"><a href="#cb21-6" tabindex="-1"></a>  T3[j] <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(n)<span class="sc">*</span>(<span class="fu">mean</span>(x) <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">/</span><span class="fu">sd</span>(x) </span>
+<span id="cb21-7"><a href="#cb21-7" tabindex="-1"></a>}</span>
+<span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a>error1[<span class="dv">3</span>] <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">abs</span>(T3) <span class="sc">&gt;</span> <span class="fu">qt</span>(<span class="dv">1</span> <span class="sc">-</span> alpha<span class="sc">/</span><span class="dv">2</span>, <span class="at">df =</span> n<span class="dv">-1</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a><span class="fu">rbind</span>(error1)</span></code></pre></div>
+<p>以上就是三种分布下的一类错误率,可以看到只有均匀分布的结果与显著性水平较为接近,这可能是因为均匀分布关于均值的对称性所导致的.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a><span class="fu">library</span>(bootstrap)</span></code></pre></div>
+</div>
+<div id="question-14" class="section level2">
+<h2>Question</h2>
+<p>考虑m=1000个假设,其中前95%为原假设成立,后5%对立假设成立.原假设下p值服从U(0,1),对立假设下为Beta(0.1,1),
+分别用Bonferroni和B-H矫正p值,在0.1的显著性水平下进行10000次模拟</p>
+</div>
+<div id="answer-14" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb24-2"><a href="#cb24-2" tabindex="-1"></a>M <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb24-3"><a href="#cb24-3" tabindex="-1"></a>FWER.bonf <span class="ot">&lt;-</span> FDR.bonf <span class="ot">&lt;-</span> TPR.bonf <span class="ot">&lt;-</span> <span class="fu">numeric</span>(M)</span>
+<span id="cb24-4"><a href="#cb24-4" tabindex="-1"></a>FWER.bh <span class="ot">&lt;-</span> FDR.bh <span class="ot">&lt;-</span> TPR.bh <span class="ot">&lt;-</span> <span class="fu">numeric</span>(M)</span>
+<span id="cb24-5"><a href="#cb24-5" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>M) {</span>
+<span id="cb24-6"><a href="#cb24-6" tabindex="-1"></a>  p <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">1000</span>)</span>
+<span id="cb24-7"><a href="#cb24-7" tabindex="-1"></a>  p[<span class="dv">1</span><span class="sc">:</span><span class="dv">950</span>] <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">950</span>)</span>
+<span id="cb24-8"><a href="#cb24-8" tabindex="-1"></a>  p[<span class="dv">951</span><span class="sc">:</span><span class="dv">1000</span>] <span class="ot">&lt;-</span> <span class="fu">rbeta</span>(<span class="dv">50</span>, <span class="fl">0.1</span>, <span class="dv">1</span>)</span>
+<span id="cb24-9"><a href="#cb24-9" tabindex="-1"></a>  p.bonf <span class="ot">&lt;-</span> <span class="fu">p.adjust</span>(p, <span class="at">method =</span> <span class="st">&#39;bonferroni&#39;</span>)</span>
+<span id="cb24-10"><a href="#cb24-10" tabindex="-1"></a>  p.bh <span class="ot">&lt;-</span> <span class="fu">p.adjust</span>(p, <span class="at">method =</span> <span class="st">&#39;fdr&#39;</span>)</span>
+<span id="cb24-11"><a href="#cb24-11" tabindex="-1"></a>  FWER.bonf[i] <span class="ot">&lt;-</span> <span class="fu">max</span>(p.bonf[<span class="dv">1</span><span class="sc">:</span><span class="dv">950</span>] <span class="sc">&lt;</span> <span class="fl">0.1</span>)</span>
+<span id="cb24-12"><a href="#cb24-12" tabindex="-1"></a>  FDR.bonf[i] <span class="ot">&lt;-</span> <span class="fu">sum</span>(p.bonf[<span class="dv">1</span><span class="sc">:</span><span class="dv">950</span>] <span class="sc">&lt;</span> <span class="fl">0.1</span>)<span class="sc">/</span><span class="fu">sum</span>(p.bonf <span class="sc">&lt;</span> <span class="fl">0.1</span>)</span>
+<span id="cb24-13"><a href="#cb24-13" tabindex="-1"></a>  TPR.bonf[i] <span class="ot">&lt;-</span> <span class="fu">sum</span>(p.bonf[<span class="dv">951</span><span class="sc">:</span><span class="dv">1000</span>] <span class="sc">&lt;</span> <span class="fl">0.1</span>)<span class="sc">/</span><span class="dv">50</span></span>
+<span id="cb24-14"><a href="#cb24-14" tabindex="-1"></a>  FWER.bh[i] <span class="ot">&lt;-</span> <span class="fu">max</span>(p.bh[<span class="dv">1</span><span class="sc">:</span><span class="dv">950</span>] <span class="sc">&lt;</span> <span class="fl">0.1</span>)</span>
+<span id="cb24-15"><a href="#cb24-15" tabindex="-1"></a>  FDR.bh[i] <span class="ot">&lt;-</span> <span class="fu">sum</span>(p.bh[<span class="dv">1</span><span class="sc">:</span><span class="dv">950</span>] <span class="sc">&lt;</span> <span class="fl">0.1</span>)<span class="sc">/</span><span class="fu">sum</span>(p.bh <span class="sc">&lt;</span> <span class="fl">0.1</span>)</span>
+<span id="cb24-16"><a href="#cb24-16" tabindex="-1"></a>  TPR.bh[i] <span class="ot">&lt;-</span> <span class="fu">sum</span>(p.bh[<span class="dv">951</span><span class="sc">:</span><span class="dv">1000</span>] <span class="sc">&lt;</span> <span class="fl">0.1</span>)<span class="sc">/</span><span class="dv">50</span></span>
+<span id="cb24-17"><a href="#cb24-17" tabindex="-1"></a>}</span>
+<span id="cb24-18"><a href="#cb24-18" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">FWER=</span><span class="fu">c</span>(<span class="fu">mean</span>(FWER.bonf),<span class="fu">mean</span>(FWER.bh)), <span class="at">FDR=</span><span class="fu">c</span>(<span class="fu">mean</span>(FDR.bonf),<span class="fu">mean</span>(FDR.bh)), <span class="at">TPR=</span><span class="fu">c</span>(<span class="fu">mean</span>(TPR.bonf),<span class="fu">mean</span>(TPR.bh)))</span>
+<span id="cb24-19"><a href="#cb24-19" tabindex="-1"></a><span class="fu">row.names</span>(d) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;Bonf&#39;</span>, <span class="st">&#39;B-H&#39;</span>)</span>
+<span id="cb24-20"><a href="#cb24-20" tabindex="-1"></a>d</span></code></pre></div>
+<p>从表格中呈现的结果我们可以看到和预期一致.Bonf的FWER接近0.1,B—H的FWER远大于0.1;Bonf的FWER远小于0.1,B-H的FDR接近0.1;TPR中B-H大于Bonf.</p>
+</div>
+<div id="question-15" class="section level2">
+<h2>Question</h2>
+<p>总体服从指数分布<span class="math inline">\(exp(\lambda)\)</span>,<span class="math inline">\(\lambda\)</span>的MLE即<span class="math inline">\(\hat{\lambda}=\frac{1}{\overline{X}}\)</span>,理论偏差和标准差分别为<span class="math inline">\(\lambda /(n-1)\)</span>,<span class="math inline">\(n\lambda/[(n-1)\sqrt{n-2}]\)</span>.用Bootstrap方法进行模拟.</p>
+</div>
+<div id="answer-15" class="section level2">
+<h2>Answer</h2>
+<p><span class="math inline">\(\lambda=2,样本量n分别取5,10,20\)</span></p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" tabindex="-1"></a>lambda <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb25-2"><a href="#cb25-2" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb25-3"><a href="#cb25-3" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb25-4"><a href="#cb25-4" tabindex="-1"></a>bias1 <span class="ot">&lt;-</span> sd1 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(m)</span>
+<span id="cb25-5"><a href="#cb25-5" tabindex="-1"></a>bias2 <span class="ot">&lt;-</span> sd2 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">3</span>)</span>
+<span id="cb25-6"><a href="#cb25-6" tabindex="-1"></a>bias3 <span class="ot">&lt;-</span> sd3 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">3</span>)</span>
+<span id="cb25-7"><a href="#cb25-7" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb25-8"><a href="#cb25-8" tabindex="-1"></a><span class="cf">for</span> (n <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">20</span>)) {</span>
+<span id="cb25-9"><a href="#cb25-9" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>m) {</span>
+<span id="cb25-10"><a href="#cb25-10" tabindex="-1"></a>    B <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb25-11"><a href="#cb25-11" tabindex="-1"></a>    lambdastar <span class="ot">&lt;-</span> <span class="fu">numeric</span>(B)</span>
+<span id="cb25-12"><a href="#cb25-12" tabindex="-1"></a>    x <span class="ot">&lt;-</span> <span class="fu">rexp</span>(n, lambda)</span>
+<span id="cb25-13"><a href="#cb25-13" tabindex="-1"></a>    lambdahat <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">mean</span>(x)</span>
+<span id="cb25-14"><a href="#cb25-14" tabindex="-1"></a>    <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>B) {</span>
+<span id="cb25-15"><a href="#cb25-15" tabindex="-1"></a>      xstar <span class="ot">&lt;-</span> <span class="fu">sample</span>(x, <span class="at">replace =</span> T)</span>
+<span id="cb25-16"><a href="#cb25-16" tabindex="-1"></a>      lambdastar[j] <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">mean</span>(xstar)</span>
+<span id="cb25-17"><a href="#cb25-17" tabindex="-1"></a>    }</span>
+<span id="cb25-18"><a href="#cb25-18" tabindex="-1"></a>    bias1[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(lambdastar) <span class="sc">-</span> lambdahat</span>
+<span id="cb25-19"><a href="#cb25-19" tabindex="-1"></a>    sd1[i] <span class="ot">&lt;-</span> <span class="fu">sd</span>(lambdastar)</span>
+<span id="cb25-20"><a href="#cb25-20" tabindex="-1"></a>  }</span>
+<span id="cb25-21"><a href="#cb25-21" tabindex="-1"></a>  bias2[k] <span class="ot">&lt;-</span> <span class="fu">mean</span>(bias1)</span>
+<span id="cb25-22"><a href="#cb25-22" tabindex="-1"></a>  sd2[k] <span class="ot">&lt;-</span> <span class="fu">mean</span>(sd1)</span>
+<span id="cb25-23"><a href="#cb25-23" tabindex="-1"></a>  bias3[k] <span class="ot">&lt;-</span> lambda<span class="sc">/</span>(n<span class="dv">-1</span>)</span>
+<span id="cb25-24"><a href="#cb25-24" tabindex="-1"></a>  sd3[k] <span class="ot">&lt;-</span> n<span class="sc">*</span>lambda<span class="sc">/</span>(n<span class="dv">-1</span>)<span class="sc">/</span><span class="fu">sqrt</span>(n<span class="dv">-2</span>)</span>
+<span id="cb25-25"><a href="#cb25-25" tabindex="-1"></a>  k <span class="ot">&lt;-</span> k<span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb25-26"><a href="#cb25-26" tabindex="-1"></a>}</span>
+<span id="cb25-27"><a href="#cb25-27" tabindex="-1"></a>d2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">bias.bootstrap =</span> bias2, <span class="at">bias.theoretical =</span> bias3, <span class="at">sd.bootstrap =</span> sd2, <span class="at">sd.theoretical =</span> sd3)</span>
+<span id="cb25-28"><a href="#cb25-28" tabindex="-1"></a><span class="fu">row.names</span>(d2) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;n=5&#39;</span>, <span class="st">&#39;n=10&#39;</span>, <span class="st">&#39;n=20&#39;</span>)</span>
+<span id="cb25-29"><a href="#cb25-29" tabindex="-1"></a>d2</span></code></pre></div>
+<p>从模拟结果来看随着样本量的增大bootstrap的偏差和标准差也越发接近理论的偏差和标准差.</p>
+</div>
+<div id="question-16" class="section level2">
+<h2>Question</h2>
+<p>ex 7.3<br />
+Obtain a bootstrap t confidence interval estimate for the correlation
+statistic in Example 7.2</p>
+</div>
+<div id="answer-16" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">200</span></span>
+<span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(law)</span>
+<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a>R <span class="ot">&lt;-</span> <span class="fu">numeric</span>(B)</span>
+<span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a>r <span class="ot">&lt;-</span> se <span class="ot">&lt;-</span> t <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">1000</span>)</span>
+<span id="cb26-5"><a href="#cb26-5" tabindex="-1"></a>corrhat <span class="ot">&lt;-</span> <span class="fu">cor</span>(law<span class="sc">$</span>LSAT, law<span class="sc">$</span>GPA)</span>
+<span id="cb26-6"><a href="#cb26-6" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">1000</span>) {</span>
+<span id="cb26-7"><a href="#cb26-7" tabindex="-1"></a>  <span class="cf">for</span> (b <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>B) {</span>
+<span id="cb26-8"><a href="#cb26-8" tabindex="-1"></a>    i <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span>n, <span class="at">size =</span> n, <span class="at">replace =</span> T)</span>
+<span id="cb26-9"><a href="#cb26-9" tabindex="-1"></a>    LSAT <span class="ot">&lt;-</span> law<span class="sc">$</span>LSAT[i]</span>
+<span id="cb26-10"><a href="#cb26-10" tabindex="-1"></a>    GPA <span class="ot">&lt;-</span> law<span class="sc">$</span>GPA[i]</span>
+<span id="cb26-11"><a href="#cb26-11" tabindex="-1"></a>    R[b] <span class="ot">&lt;-</span> <span class="fu">cor</span>(LSAT, GPA)</span>
+<span id="cb26-12"><a href="#cb26-12" tabindex="-1"></a>  }</span>
+<span id="cb26-13"><a href="#cb26-13" tabindex="-1"></a>  r[j] <span class="ot">&lt;-</span> <span class="fu">mean</span>(R)</span>
+<span id="cb26-14"><a href="#cb26-14" tabindex="-1"></a>  se[j] <span class="ot">&lt;-</span> <span class="fu">sd</span>(R)</span>
+<span id="cb26-15"><a href="#cb26-15" tabindex="-1"></a>  t[j] <span class="ot">&lt;-</span> (r[j] <span class="sc">-</span> corrhat)<span class="sc">/</span>se[j]</span>
+<span id="cb26-16"><a href="#cb26-16" tabindex="-1"></a>}</span>
+<span id="cb26-17"><a href="#cb26-17" tabindex="-1"></a>sehat <span class="ot">&lt;-</span> <span class="fu">mean</span>(se)</span>
+<span id="cb26-18"><a href="#cb26-18" tabindex="-1"></a>QT <span class="ot">&lt;-</span> <span class="fu">quantile</span>(t, <span class="fu">c</span>(<span class="fl">0.05</span><span class="sc">/</span><span class="dv">2</span>, <span class="dv">1</span><span class="fl">-0.05</span><span class="sc">/</span><span class="dv">2</span>), <span class="at">type =</span> <span class="dv">1</span>)</span>
+<span id="cb26-19"><a href="#cb26-19" tabindex="-1"></a><span class="fu">names</span>(QT) <span class="ot">&lt;-</span> <span class="fu">rev</span>(<span class="fu">names</span>(QT))</span>
+<span id="cb26-20"><a href="#cb26-20" tabindex="-1"></a>CI <span class="ot">&lt;-</span> <span class="fu">rev</span>(corrhat <span class="sc">-</span> QT<span class="sc">*</span>sehat)</span>
+<span id="cb26-21"><a href="#cb26-21" tabindex="-1"></a>CI</span></code></pre></div>
+<p>以上即为所求的t置信区间</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&#39;bootstrap&#39;</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&#39;DAAG&#39;</span>)</span></code></pre></div>
+</div>
+<div id="question-17" class="section level2">
+<h2>Question</h2>
+<p>ex 7.5<br />
+用不同的bootstrap置信区间的构造方法对ex.7.4中的数据计算其95%置信区间,并比较区别.</p>
+</div>
+<div id="answer-17" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">18</span>, <span class="dv">43</span>, <span class="dv">85</span>, <span class="dv">91</span>, <span class="dv">98</span>, <span class="dv">100</span>, <span class="dv">130</span>, <span class="dv">230</span>, <span class="dv">487</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" tabindex="-1"></a>SN <span class="ot">&lt;-</span> Basic <span class="ot">&lt;-</span> Percent <span class="ot">&lt;-</span> BCa <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">2</span>)</span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb28-4"><a href="#cb28-4" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="fu">numeric</span>(B)</span>
+<span id="cb28-5"><a href="#cb28-5" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>B) {</span>
+<span id="cb28-6"><a href="#cb28-6" tabindex="-1"></a>  j <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>, <span class="dv">12</span>, <span class="at">replace =</span> T)</span>
+<span id="cb28-7"><a href="#cb28-7" tabindex="-1"></a>  theta[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(x[j])</span>
+<span id="cb28-8"><a href="#cb28-8" tabindex="-1"></a>}</span>
+<span id="cb28-9"><a href="#cb28-9" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">sort</span>(theta)</span>
+<span id="cb28-10"><a href="#cb28-10" tabindex="-1"></a>bootse <span class="ot">&lt;-</span> <span class="fu">sd</span>(theta)</span>
+<span id="cb28-11"><a href="#cb28-11" tabindex="-1"></a>SN <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">mean</span>(x) <span class="sc">-</span> <span class="fu">qnorm</span>(<span class="fl">0.975</span>)<span class="sc">*</span>bootse, <span class="fu">mean</span>(x) <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="fl">0.975</span>)<span class="sc">*</span>bootse)</span>
+<span id="cb28-12"><a href="#cb28-12" tabindex="-1"></a>Basic <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">2</span><span class="sc">*</span><span class="fu">mean</span>(x) <span class="sc">-</span> y[<span class="fu">ceiling</span>(B<span class="sc">*</span><span class="fl">0.975</span>)], <span class="dv">2</span><span class="sc">*</span><span class="fu">mean</span>(x) <span class="sc">-</span> y[<span class="fu">floor</span>(B<span class="sc">*</span><span class="fl">0.025</span>)])</span>
+<span id="cb28-13"><a href="#cb28-13" tabindex="-1"></a>Percent <span class="ot">&lt;-</span> <span class="fu">c</span>(y[<span class="fu">floor</span>(B<span class="sc">*</span><span class="fl">0.025</span>)], y[<span class="fu">ceiling</span>(B<span class="sc">*</span><span class="fl">0.975</span>)])</span>
+<span id="cb28-14"><a href="#cb28-14" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(<span class="fu">mean</span>(theta <span class="sc">&lt;</span> <span class="fu">mean</span>(x)))</span>
+<span id="cb28-15"><a href="#cb28-15" tabindex="-1"></a>theta.j <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">12</span>)</span>
+<span id="cb28-16"><a href="#cb28-16" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>) {</span>
+<span id="cb28-17"><a href="#cb28-17" tabindex="-1"></a>  theta.j[i] <span class="ot">&lt;-</span> <span class="fu">mean</span>(x[<span class="sc">-</span>i])</span>
+<span id="cb28-18"><a href="#cb28-18" tabindex="-1"></a>}</span>
+<span id="cb28-19"><a href="#cb28-19" tabindex="-1"></a>x.j <span class="ot">&lt;-</span> <span class="fu">mean</span>(theta.j)</span>
+<span id="cb28-20"><a href="#cb28-20" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">sum</span>((x.j<span class="sc">-</span>theta.j)<span class="sc">^</span><span class="dv">3</span>)<span class="sc">/</span><span class="dv">6</span><span class="sc">/</span><span class="fu">sum</span>(<span class="fu">abs</span>(x.j<span class="sc">-</span>theta.j)<span class="sc">^</span><span class="dv">3</span>)</span>
+<span id="cb28-21"><a href="#cb28-21" tabindex="-1"></a>alpha1 <span class="ot">&lt;-</span> <span class="fu">pnorm</span>(z <span class="sc">+</span> (z <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="fl">0.025</span>))<span class="sc">/</span>(<span class="dv">1</span> <span class="sc">-</span> a<span class="sc">*</span>(z <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="fl">0.025</span>))))</span>
+<span id="cb28-22"><a href="#cb28-22" tabindex="-1"></a>alpha2 <span class="ot">&lt;-</span> <span class="fu">pnorm</span>(z <span class="sc">+</span> (z <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="fl">0.975</span>))<span class="sc">/</span>(<span class="dv">1</span> <span class="sc">-</span> a<span class="sc">*</span>(z <span class="sc">+</span> <span class="fu">qnorm</span>(<span class="fl">0.975</span>))))</span>
+<span id="cb28-23"><a href="#cb28-23" tabindex="-1"></a>BCa <span class="ot">&lt;-</span> <span class="fu">c</span>(y[<span class="fu">floor</span>(B<span class="sc">*</span>alpha1)], y[<span class="fu">ceiling</span>(B<span class="sc">*</span>alpha2)])</span>
+<span id="cb28-24"><a href="#cb28-24" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="st">&#39;Standard Normal&#39;</span> <span class="ot">=</span> SN, <span class="at">Basci =</span> Basic, <span class="at">Percentile =</span> Percent, <span class="at">BCa =</span> BCa)</span>
+<span id="cb28-25"><a href="#cb28-25" tabindex="-1"></a><span class="fu">row.names</span>(d) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;LCL&#39;</span>, <span class="st">&#39;UCL&#39;</span>)</span>
+<span id="cb28-26"><a href="#cb28-26" tabindex="-1"></a>d</span></code></pre></div>
+<p>从结果中我们可以看到不同方法得到的置信区间是不同的,这是由于他们构造方法是基于不同的假设进行的.</p>
+</div>
+<div id="question-18" class="section level2">
+<h2>Question</h2>
+<p>ex 7.8<br />
+用jackknife估计ex 7.7中的偏差和标准差(scor数据集)</p>
+</div>
+<div id="answer-18" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(scor)</span>
+<span id="cb29-2"><a href="#cb29-2" tabindex="-1"></a>theta.j <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n)</span>
+<span id="cb29-3"><a href="#cb29-3" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n) {</span>
+<span id="cb29-4"><a href="#cb29-4" tabindex="-1"></a>  Sigma <span class="ot">&lt;-</span> <span class="fu">cov</span>(scor[<span class="sc">-</span>i,])</span>
+<span id="cb29-5"><a href="#cb29-5" tabindex="-1"></a>  e <span class="ot">&lt;-</span> <span class="fu">eigen</span>(Sigma, <span class="at">symmetric =</span> T)</span>
+<span id="cb29-6"><a href="#cb29-6" tabindex="-1"></a>  lambda <span class="ot">&lt;-</span> e<span class="sc">$</span>values</span>
+<span id="cb29-7"><a href="#cb29-7" tabindex="-1"></a>  theta.j[i] <span class="ot">&lt;-</span> <span class="fu">max</span>(lambda)<span class="sc">/</span><span class="fu">sum</span>(lambda)</span>
+<span id="cb29-8"><a href="#cb29-8" tabindex="-1"></a>}</span>
+<span id="cb29-9"><a href="#cb29-9" tabindex="-1"></a>e1 <span class="ot">&lt;-</span> <span class="fu">eigen</span>(<span class="fu">cov</span>(scor), <span class="at">symmetric =</span> T)</span>
+<span id="cb29-10"><a href="#cb29-10" tabindex="-1"></a>lambda1 <span class="ot">&lt;-</span> e1<span class="sc">$</span>values</span>
+<span id="cb29-11"><a href="#cb29-11" tabindex="-1"></a>theta.hat <span class="ot">&lt;-</span> <span class="fu">max</span>(lambda1)<span class="sc">/</span><span class="fu">sum</span>(lambda1)</span>
+<span id="cb29-12"><a href="#cb29-12" tabindex="-1"></a>bias.hat <span class="ot">&lt;-</span> (n<span class="dv">-1</span>)<span class="sc">*</span>(<span class="fu">mean</span>(theta.j) <span class="sc">-</span> theta.hat)</span>
+<span id="cb29-13"><a href="#cb29-13" tabindex="-1"></a>se.hat <span class="ot">&lt;-</span> (n<span class="dv">-1</span>)<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span>n<span class="sc">*</span><span class="fu">var</span>(theta.j)</span>
+<span id="cb29-14"><a href="#cb29-14" tabindex="-1"></a><span class="fu">rbind</span>(bias.hat, se.hat)</span></code></pre></div>
+<p>按照Jackknife方法得到的偏差和标准差的估计如上.</p>
+</div>
+<div id="question-19" class="section level2">
+<h2>Question</h2>
+<p>ex 7.11<br />
+在例7.18中,用leave-two-out交叉验证来比较模型</p>
+</div>
+<div id="answer-19" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a>m <span class="ot">&lt;-</span> ironslag<span class="sc">$</span>magnetic</span>
+<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a>c <span class="ot">&lt;-</span> ironslag<span class="sc">$</span>chemical</span>
+<span id="cb30-3"><a href="#cb30-3" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(m)</span>
+<span id="cb30-4"><a href="#cb30-4" tabindex="-1"></a>e1 <span class="ot">&lt;-</span> e2 <span class="ot">&lt;-</span> e3 <span class="ot">&lt;-</span> e4 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n<span class="sc">*</span>(n<span class="dv">-1</span>)<span class="sc">/</span><span class="dv">2</span>)</span>
+<span id="cb30-5"><a href="#cb30-5" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb30-6"><a href="#cb30-6" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>(n<span class="dv">-1</span>)) {</span>
+<span id="cb30-7"><a href="#cb30-7" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> (i<span class="sc">+</span><span class="dv">1</span>)<span class="sc">:</span>n) {</span>
+<span id="cb30-8"><a href="#cb30-8" tabindex="-1"></a>    k <span class="ot">&lt;-</span> k <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb30-9"><a href="#cb30-9" tabindex="-1"></a>    y <span class="ot">&lt;-</span> m[<span class="sc">-</span><span class="fu">c</span>(i,j)]</span>
+<span id="cb30-10"><a href="#cb30-10" tabindex="-1"></a>    x <span class="ot">&lt;-</span> c[<span class="sc">-</span><span class="fu">c</span>(i,j)]</span>
+<span id="cb30-11"><a href="#cb30-11" tabindex="-1"></a>    J1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x)</span>
+<span id="cb30-12"><a href="#cb30-12" tabindex="-1"></a>    yhat1 <span class="ot">&lt;-</span> J1<span class="sc">$</span>coef[<span class="dv">1</span>] <span class="sc">+</span> J1<span class="sc">$</span>coef[<span class="dv">2</span>] <span class="sc">*</span> c[<span class="fu">c</span>(i,j)]</span>
+<span id="cb30-13"><a href="#cb30-13" tabindex="-1"></a>    e1[k] <span class="ot">&lt;-</span> <span class="fu">sum</span>((m[<span class="fu">c</span>(i,j)] <span class="sc">-</span> yhat1)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb30-14"><a href="#cb30-14" tabindex="-1"></a>    J2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x <span class="sc">+</span> <span class="fu">I</span>(x<span class="sc">^</span><span class="dv">2</span>))</span>
+<span id="cb30-15"><a href="#cb30-15" tabindex="-1"></a>    yhat2 <span class="ot">&lt;-</span> J2<span class="sc">$</span>coef[<span class="dv">1</span>] <span class="sc">+</span> J2<span class="sc">$</span>coef[<span class="dv">2</span>] <span class="sc">*</span> c[<span class="fu">c</span>(i,j)] <span class="sc">+</span> J2<span class="sc">$</span>coef[<span class="dv">3</span>] <span class="sc">*</span> c[<span class="fu">c</span>(i,j)]<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb30-16"><a href="#cb30-16" tabindex="-1"></a>    e2[k] <span class="ot">&lt;-</span> <span class="fu">sum</span>((m[<span class="fu">c</span>(i,j)] <span class="sc">-</span> yhat2)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb30-17"><a href="#cb30-17" tabindex="-1"></a>    J3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(y) <span class="sc">~</span> x)</span>
+<span id="cb30-18"><a href="#cb30-18" tabindex="-1"></a>    logyhat3 <span class="ot">&lt;-</span> J3<span class="sc">$</span>coef[<span class="dv">1</span>] <span class="sc">+</span> J3<span class="sc">$</span>coef[<span class="dv">2</span>] <span class="sc">*</span> c[<span class="fu">c</span>(i,j)]</span>
+<span id="cb30-19"><a href="#cb30-19" tabindex="-1"></a>    yhat3 <span class="ot">&lt;-</span> <span class="fu">exp</span>(logyhat3)</span>
+<span id="cb30-20"><a href="#cb30-20" tabindex="-1"></a>    e3[k] <span class="ot">&lt;-</span> <span class="fu">sum</span>((m[<span class="fu">c</span>(i,j)] <span class="sc">-</span> yhat3)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb30-21"><a href="#cb30-21" tabindex="-1"></a>    J4 <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(y) <span class="sc">~</span> <span class="fu">log</span>(x))</span>
+<span id="cb30-22"><a href="#cb30-22" tabindex="-1"></a>    logyhat4 <span class="ot">&lt;-</span> J4<span class="sc">$</span>coef[<span class="dv">1</span>] <span class="sc">+</span> J4<span class="sc">$</span>coef[<span class="dv">2</span>] <span class="sc">*</span> <span class="fu">log</span>(c[<span class="fu">c</span>(i,j)])</span>
+<span id="cb30-23"><a href="#cb30-23" tabindex="-1"></a>    yhat4 <span class="ot">&lt;-</span> <span class="fu">exp</span>(logyhat4)</span>
+<span id="cb30-24"><a href="#cb30-24" tabindex="-1"></a>    e4[k] <span class="ot">&lt;-</span> <span class="fu">sum</span>((m[<span class="fu">c</span>(i,j)] <span class="sc">-</span> yhat4)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb30-25"><a href="#cb30-25" tabindex="-1"></a>  }</span>
+<span id="cb30-26"><a href="#cb30-26" tabindex="-1"></a>}</span>
+<span id="cb30-27"><a href="#cb30-27" tabindex="-1"></a><span class="fu">cbind</span>(<span class="fu">mean</span>(e1), <span class="fu">mean</span>(e2), <span class="fu">mean</span>(e3), <span class="fu">mean</span>(e4))</span></code></pre></div>
+<p>从上述结果来看,模型二拟合最好.</p>
+</div>
+<div id="question-20" class="section level2">
+<h2>Question</h2>
+<p>Proof the Stationarity of Metropolis-Hastings sampler Algorithm in
+continuous situation.</p>
+</div>
+<div id="answer-20" class="section level2">
+<h2>Answer</h2>
+<p><span class="math inline">\(i=j时,显然成立.\)</span><br />
+<span class="math inline">\(i\neq j时,\)</span><br />
+<span class="math inline">\(K(s,r)f(s)=g(r|s)f(s)min\{\frac{f(r)g(s|r)}{f(s)g(r|s)},1\}\)</span><br />
+<span class="math inline">\(=min\{f(r)g(s|r),f(s)g(r|s)\}=g(s|r)f(r)min\{\frac{f(s)g(r|s)}{f(r)g(s|r)},1\}\)</span><br />
+<span class="math inline">\(=K(r,s)f(r)\)</span></p>
+</div>
+<div id="question-21" class="section level2">
+<h2>Question</h2>
+<p>ex8.1 Implement the two-sample Cramer-von Mises test for equal
+distributions<br />
+as a permutation test. Apply the test to the data in Examples 8.1 and
+8.2.</p>
+</div>
+<div id="answer-21" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" tabindex="-1"></a>f1 <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb31-2"><a href="#cb31-2" tabindex="-1"></a>  <span class="fu">mean</span>(y <span class="sc">&lt;=</span> x)</span>
+<span id="cb31-3"><a href="#cb31-3" tabindex="-1"></a>}</span>
+<span id="cb31-4"><a href="#cb31-4" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" tabindex="-1"></a>cvm <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb31-6"><a href="#cb31-6" tabindex="-1"></a>  W <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb31-7"><a href="#cb31-7" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">length</span>(x)</span>
+<span id="cb31-8"><a href="#cb31-8" tabindex="-1"></a>  m <span class="ot">&lt;-</span> <span class="fu">length</span>(y)</span>
+<span id="cb31-9"><a href="#cb31-9" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n) {</span>
+<span id="cb31-10"><a href="#cb31-10" tabindex="-1"></a>    W <span class="ot">&lt;-</span> W <span class="sc">+</span> (<span class="fu">f1</span>(x[i], x) <span class="sc">-</span> <span class="fu">f1</span>(x[i], y))<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb31-11"><a href="#cb31-11" tabindex="-1"></a>  }</span>
+<span id="cb31-12"><a href="#cb31-12" tabindex="-1"></a>  <span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>m) {</span>
+<span id="cb31-13"><a href="#cb31-13" tabindex="-1"></a>    W <span class="ot">&lt;-</span> W <span class="sc">+</span> (<span class="fu">f1</span>(y[j], x) <span class="sc">-</span> <span class="fu">f1</span>(y[j], y))<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb31-14"><a href="#cb31-14" tabindex="-1"></a>  }</span>
+<span id="cb31-15"><a href="#cb31-15" tabindex="-1"></a>  m<span class="sc">*</span>n<span class="sc">/</span>(m<span class="sc">+</span>n)<span class="sc">^</span><span class="dv">2</span><span class="sc">*</span>W</span>
+<span id="cb31-16"><a href="#cb31-16" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">158</span> ,<span class="dv">171</span> ,<span class="dv">193</span> ,<span class="dv">199</span> ,<span class="dv">230</span> ,<span class="dv">243</span> ,<span class="dv">248</span> ,<span class="dv">248</span> ,<span class="dv">250</span> ,<span class="dv">267</span> ,<span class="dv">271</span> ,<span class="dv">316</span> ,<span class="dv">327</span> ,<span class="dv">329</span>)</span>
+<span id="cb32-2"><a href="#cb32-2" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">141</span> ,<span class="dv">148</span> ,<span class="dv">169</span> ,<span class="dv">181</span> ,<span class="dv">203</span> ,<span class="dv">213</span> ,<span class="dv">229</span> ,<span class="dv">244</span> ,<span class="dv">257</span> ,<span class="dv">260</span> ,<span class="dv">271</span> ,<span class="dv">309</span>)</span>
+<span id="cb32-3"><a href="#cb32-3" tabindex="-1"></a>T.hat <span class="ot">&lt;-</span> <span class="fu">cvm</span>(x,y)</span>
+<span id="cb32-4"><a href="#cb32-4" tabindex="-1"></a>B <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb32-5"><a href="#cb32-5" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(x,y)</span>
+<span id="cb32-6"><a href="#cb32-6" tabindex="-1"></a>Tstar <span class="ot">&lt;-</span> <span class="fu">numeric</span>(B)</span>
+<span id="cb32-7"><a href="#cb32-7" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>B) {</span>
+<span id="cb32-8"><a href="#cb32-8" tabindex="-1"></a>  k <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(z), <span class="at">size =</span> <span class="fu">length</span>(x), <span class="at">replace =</span> F)</span>
+<span id="cb32-9"><a href="#cb32-9" tabindex="-1"></a>  x1 <span class="ot">&lt;-</span> z[k]</span>
+<span id="cb32-10"><a href="#cb32-10" tabindex="-1"></a>  y1 <span class="ot">&lt;-</span> z[<span class="sc">-</span>k]</span>
+<span id="cb32-11"><a href="#cb32-11" tabindex="-1"></a>  Tstar[i] <span class="ot">&lt;-</span> <span class="fu">cvm</span>(x1, y1)</span>
+<span id="cb32-12"><a href="#cb32-12" tabindex="-1"></a>}</span>
+<span id="cb32-13"><a href="#cb32-13" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">c</span>(T.hat, Tstar) <span class="sc">&gt;=</span> T.hat)</span>
+<span id="cb32-14"><a href="#cb32-14" tabindex="-1"></a>p</span></code></pre></div>
+<p>从上面的估计的p值,我们认为例8.1中的分布差异是不显著的.</p>
+</div>
+<div id="question-22" class="section level2">
+<h2>Question</h2>
+<p>ex8.3 The Count 5 test for equal variances in Section 6.4 is based on
+the maximum number of extreme points. Example 6.15 shows that the Count
+5 criterion is not applicable for unequal sample sizes. Implement a
+permutation test for equal variance based on the maximum number of
+extreme points that applies when sample sizes are not necessarily
+equal.</p>
+</div>
+<div id="answer-22" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a>count5test <span class="ot">&lt;-</span> <span class="cf">function</span>(x, y){</span>
+<span id="cb33-2"><a href="#cb33-2" tabindex="-1"></a>  X <span class="ot">&lt;-</span> x <span class="sc">-</span> <span class="fu">mean</span>(x)</span>
+<span id="cb33-3"><a href="#cb33-3" tabindex="-1"></a>  Y <span class="ot">&lt;-</span> y <span class="sc">-</span> <span class="fu">mean</span>(y)</span>
+<span id="cb33-4"><a href="#cb33-4" tabindex="-1"></a>  outx <span class="ot">&lt;-</span> <span class="fu">sum</span>(X <span class="sc">&gt;</span> <span class="fu">max</span>(Y)) <span class="sc">+</span> <span class="fu">sum</span>(X <span class="sc">&lt;</span> <span class="fu">min</span>(Y))</span>
+<span id="cb33-5"><a href="#cb33-5" tabindex="-1"></a>  outy <span class="ot">&lt;-</span> <span class="fu">sum</span>(Y <span class="sc">&gt;</span> <span class="fu">max</span>(X)) <span class="sc">+</span> <span class="fu">sum</span>(Y <span class="sc">&lt;</span> <span class="fu">min</span>(X))</span>
+<span id="cb33-6"><a href="#cb33-6" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">max</span>(<span class="fu">c</span>(outx, outy)))</span>
+<span id="cb33-7"><a href="#cb33-7" tabindex="-1"></a>}</span>
+<span id="cb33-8"><a href="#cb33-8" tabindex="-1"></a>n1 <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb33-9"><a href="#cb33-9" tabindex="-1"></a>n2 <span class="ot">&lt;-</span> <span class="dv">30</span></span>
+<span id="cb33-10"><a href="#cb33-10" tabindex="-1"></a>mu1 <span class="ot">&lt;-</span> mu2 <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb33-11"><a href="#cb33-11" tabindex="-1"></a>sigma1 <span class="ot">&lt;-</span> sigma2 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb33-12"><a href="#cb33-12" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb33-13"><a href="#cb33-13" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n1, mu1, sigma1)</span>
+<span id="cb33-14"><a href="#cb33-14" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n2, mu2, sigma2)</span>
+<span id="cb33-15"><a href="#cb33-15" tabindex="-1"></a>count.hat <span class="ot">&lt;-</span> <span class="fu">count5test</span>(x,y)</span>
+<span id="cb33-16"><a href="#cb33-16" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">c</span>(x,y)</span>
+<span id="cb33-17"><a href="#cb33-17" tabindex="-1"></a>countstar <span class="ot">&lt;-</span> <span class="fu">numeric</span>(m)</span>
+<span id="cb33-18"><a href="#cb33-18" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>m) {</span>
+<span id="cb33-19"><a href="#cb33-19" tabindex="-1"></a>  k <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(z), <span class="at">size =</span> <span class="fu">length</span>(x), <span class="at">replace =</span> F)</span>
+<span id="cb33-20"><a href="#cb33-20" tabindex="-1"></a>  x1 <span class="ot">&lt;-</span> z[k]</span>
+<span id="cb33-21"><a href="#cb33-21" tabindex="-1"></a>  y1 <span class="ot">&lt;-</span> z[<span class="sc">-</span>k]</span>
+<span id="cb33-22"><a href="#cb33-22" tabindex="-1"></a>  countstar[i] <span class="ot">&lt;-</span> <span class="fu">count5test</span>(x1,y1)</span>
+<span id="cb33-23"><a href="#cb33-23" tabindex="-1"></a>}</span>
+<span id="cb33-24"><a href="#cb33-24" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">c</span>(count.hat, countstar) <span class="sc">&gt;=</span> count.hat)</span>
+<span id="cb33-25"><a href="#cb33-25" tabindex="-1"></a>p</span></code></pre></div>
+<p>从置换检验的结果,p值很大.和预期结果一致.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;coda&quot;</span>)</span></code></pre></div>
+</div>
+<div id="question-23" class="section level2">
+<h2>Question</h2>
+<p>Consider a model <span class="math inline">\(P(Y = 1 | X1, X2, X3) =
+\frac{exp(a+b1X1+b2X2+b3X3)}{1+exp(a+b1X1+b2X2+b3X3)}\)</span>, where X1
+∼ P(1), X2 ∼ Exp(1) and X3 ∼ B(1, 0.5).</p>
+</div>
+<div id="answer-23" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(N, b1, b2, b3, f0){</span>
+<span id="cb35-2"><a href="#cb35-2" tabindex="-1"></a>  x1 <span class="ot">&lt;-</span> <span class="fu">rpois</span>(N, <span class="dv">1</span>); x2 <span class="ot">&lt;-</span> <span class="fu">rexp</span>(N); x3 <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(N, <span class="dv">1</span>, <span class="fl">0.5</span>)</span>
+<span id="cb35-3"><a href="#cb35-3" tabindex="-1"></a>  g <span class="ot">&lt;-</span> <span class="cf">function</span>(alpha){</span>
+<span id="cb35-4"><a href="#cb35-4" tabindex="-1"></a>    tmp <span class="ot">&lt;-</span> <span class="fu">exp</span>(<span class="sc">-</span>alpha<span class="sc">-</span>b1<span class="sc">*</span>x1<span class="sc">-</span>b2<span class="sc">*</span>x2<span class="sc">-</span>b3<span class="sc">*</span>x3); p <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">/</span>(<span class="dv">1</span><span class="sc">+</span>tmp)</span>
+<span id="cb35-5"><a href="#cb35-5" tabindex="-1"></a>    <span class="fu">mean</span>(p) <span class="sc">-</span> f0</span>
+<span id="cb35-6"><a href="#cb35-6" tabindex="-1"></a>  }</span>
+<span id="cb35-7"><a href="#cb35-7" tabindex="-1"></a> solution <span class="ot">&lt;-</span> <span class="fu">uniroot</span>(g, <span class="fu">c</span>(<span class="sc">-</span><span class="dv">20</span>,<span class="dv">0</span>))</span>
+<span id="cb35-8"><a href="#cb35-8" tabindex="-1"></a> solution<span class="sc">$</span>root</span>
+<span id="cb35-9"><a href="#cb35-9" tabindex="-1"></a>}</span>
+<span id="cb35-10"><a href="#cb35-10" tabindex="-1"></a></span>
+<span id="cb35-11"><a href="#cb35-11" tabindex="-1"></a>f0 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="fl">0.001</span>, <span class="fl">0.0001</span>)</span>
+<span id="cb35-12"><a href="#cb35-12" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="fl">1e6</span>; b1 <span class="ot">&lt;-</span> <span class="dv">0</span>; b2 <span class="ot">&lt;-</span> <span class="dv">1</span>; b3 <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">1</span></span>
+<span id="cb35-13"><a href="#cb35-13" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">numeric</span>(<span class="dv">4</span>)</span>
+<span id="cb35-14"><a href="#cb35-14" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>) {</span>
+<span id="cb35-15"><a href="#cb35-15" tabindex="-1"></a>  a[i] <span class="ot">&lt;-</span> <span class="fu">f</span>(N, b1, b2, b3, f0[i])</span>
+<span id="cb35-16"><a href="#cb35-16" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" tabindex="-1"></a><span class="fu">rbind</span>(f0,a)</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" tabindex="-1"></a><span class="fu">plot</span>(<span class="sc">-</span><span class="fu">log</span>(f0), a, <span class="at">pch =</span> <span class="dv">19</span>)</span></code></pre></div>
+</div>
+<div id="question-24" class="section level2">
+<h2>Question</h2>
+<p>ex 9.4 Implement a random walk Metropolis sampler for generating the
+standard Laplace distribution</p>
+</div>
+<div id="answer-24" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" tabindex="-1"></a>dlaplace <span class="ot">&lt;-</span> <span class="cf">function</span>(x){</span>
+<span id="cb38-2"><a href="#cb38-2" tabindex="-1"></a>  <span class="cf">if</span>(x <span class="sc">&gt;=</span><span class="dv">0</span>){</span>
+<span id="cb38-3"><a href="#cb38-3" tabindex="-1"></a>    <span class="fu">exp</span>(<span class="sc">-</span>x)<span class="sc">/</span><span class="dv">2</span></span>
+<span id="cb38-4"><a href="#cb38-4" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb38-5"><a href="#cb38-5" tabindex="-1"></a>    <span class="fu">exp</span>(x)<span class="sc">/</span><span class="dv">2</span></span>
+<span id="cb38-6"><a href="#cb38-6" tabindex="-1"></a>  }</span>
+<span id="cb38-7"><a href="#cb38-7" tabindex="-1"></a>}</span>
+<span id="cb38-8"><a href="#cb38-8" tabindex="-1"></a></span>
+<span id="cb38-9"><a href="#cb38-9" tabindex="-1"></a>rw.Metropolis <span class="ot">&lt;-</span> <span class="cf">function</span>(sigma, x0, N){</span>
+<span id="cb38-10"><a href="#cb38-10" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">numeric</span>(N)</span>
+<span id="cb38-11"><a href="#cb38-11" tabindex="-1"></a>  x[<span class="dv">1</span>] <span class="ot">&lt;-</span> x0</span>
+<span id="cb38-12"><a href="#cb38-12" tabindex="-1"></a>  u <span class="ot">&lt;-</span> <span class="fu">runif</span>(N)</span>
+<span id="cb38-13"><a href="#cb38-13" tabindex="-1"></a>  k <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb38-14"><a href="#cb38-14" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>N) {</span>
+<span id="cb38-15"><a href="#cb38-15" tabindex="-1"></a>    y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1</span>, x[i<span class="dv">-1</span>], sigma)</span>
+<span id="cb38-16"><a href="#cb38-16" tabindex="-1"></a>    <span class="cf">if</span> (u[i] <span class="sc">&gt;</span> (<span class="fu">dlaplace</span>(y)<span class="sc">/</span><span class="fu">dlaplace</span>(x[i<span class="dv">-1</span>])))</span>
+<span id="cb38-17"><a href="#cb38-17" tabindex="-1"></a>      x[i] <span class="ot">&lt;-</span> x[i<span class="dv">-1</span>]</span>
+<span id="cb38-18"><a href="#cb38-18" tabindex="-1"></a>    <span class="cf">else</span> {</span>
+<span id="cb38-19"><a href="#cb38-19" tabindex="-1"></a>      x[i] <span class="ot">&lt;-</span> y</span>
+<span id="cb38-20"><a href="#cb38-20" tabindex="-1"></a>      k <span class="ot">&lt;-</span> k <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb38-21"><a href="#cb38-21" tabindex="-1"></a>    }</span>
+<span id="cb38-22"><a href="#cb38-22" tabindex="-1"></a>  }</span>
+<span id="cb38-23"><a href="#cb38-23" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">x=</span>x, <span class="at">k=</span>k))</span>
+<span id="cb38-24"><a href="#cb38-24" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">2000</span></span>
+<span id="cb39-2"><a href="#cb39-2" tabindex="-1"></a>Sigma <span class="ot">&lt;-</span> <span class="fu">c</span>(.<span class="dv">05</span>, .<span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">16</span>)</span>
+<span id="cb39-3"><a href="#cb39-3" tabindex="-1"></a>x0 <span class="ot">&lt;-</span> <span class="dv">20</span></span>
+<span id="cb39-4"><a href="#cb39-4" tabindex="-1"></a>rw1 <span class="ot">&lt;-</span> <span class="fu">rw.Metropolis</span>(Sigma[<span class="dv">1</span>], x0, N)</span>
+<span id="cb39-5"><a href="#cb39-5" tabindex="-1"></a>rw2 <span class="ot">&lt;-</span> <span class="fu">rw.Metropolis</span>(Sigma[<span class="dv">2</span>], x0, N)</span>
+<span id="cb39-6"><a href="#cb39-6" tabindex="-1"></a>rw3 <span class="ot">&lt;-</span> <span class="fu">rw.Metropolis</span>(Sigma[<span class="dv">3</span>], x0, N)</span>
+<span id="cb39-7"><a href="#cb39-7" tabindex="-1"></a>rw4 <span class="ot">&lt;-</span> <span class="fu">rw.Metropolis</span>(Sigma[<span class="dv">4</span>], x0, N)</span>
+<span id="cb39-8"><a href="#cb39-8" tabindex="-1"></a><span class="fu">rbind</span>(Sigma, <span class="fu">c</span>(rw1<span class="sc">$</span>k, rw2<span class="sc">$</span>k, rw3<span class="sc">$</span>k, rw4<span class="sc">$</span>k)<span class="sc">/</span>N)</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" tabindex="-1"></a>rw <span class="ot">&lt;-</span> <span class="fu">cbind</span>(rw1<span class="sc">$</span>x, rw2<span class="sc">$</span>x, rw3<span class="sc">$</span>x, rw4<span class="sc">$</span>x)</span>
+<span id="cb40-2"><a href="#cb40-2" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>) {</span>
+<span id="cb40-3"><a href="#cb40-3" tabindex="-1"></a>  <span class="fu">plot</span>(rw[,j], <span class="at">type =</span> <span class="st">&quot;l&quot;</span>,</span>
+<span id="cb40-4"><a href="#cb40-4" tabindex="-1"></a>       <span class="at">xlab =</span> <span class="fu">bquote</span>(sigma <span class="sc">==</span> .(<span class="fu">round</span>(Sigma[j],<span class="dv">3</span>))),</span>
+<span id="cb40-5"><a href="#cb40-5" tabindex="-1"></a>       <span class="at">ylab=</span><span class="st">&quot;X&quot;</span>, <span class="at">ylim =</span> <span class="fu">range</span>(rw[,j]))</span>
+<span id="cb40-6"><a href="#cb40-6" tabindex="-1"></a>}</span></code></pre></div>
+<p>从结果可以看出接受率随sigma增大而减小,sigma=2时的链产生情况最好.</p>
+</div>
+<div id="question-25" class="section level2">
+<h2>Question</h2>
+<p>ex 9.7 Implement a Gibbs sampler to generate a bivariate normal chain
+(Xt, Yt) with zero means, unit standard deviations, and correlation
+0.9</p>
+</div>
+<div id="answer-25" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">4000</span> </span>
+<span id="cb41-2"><a href="#cb41-2" tabindex="-1"></a>burn <span class="ot">&lt;-</span> <span class="dv">1500</span> </span>
+<span id="cb41-3"><a href="#cb41-3" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, N, <span class="dv">2</span>) </span>
+<span id="cb41-4"><a href="#cb41-4" tabindex="-1"></a>rho <span class="ot">&lt;-</span> <span class="fl">0.9</span>;mu <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">0</span>);Sigma <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb41-5"><a href="#cb41-5" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(<span class="dv">1</span><span class="sc">-</span>rho<span class="sc">^</span><span class="dv">2</span>)<span class="sc">*</span>Sigma</span>
+<span id="cb41-6"><a href="#cb41-6" tabindex="-1"></a>X[<span class="dv">1</span>, ] <span class="ot">&lt;-</span> <span class="fu">c</span>(mu[<span class="dv">1</span>], mu[<span class="dv">2</span>])</span>
+<span id="cb41-7"><a href="#cb41-7" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>N) {</span>
+<span id="cb41-8"><a href="#cb41-8" tabindex="-1"></a>x2 <span class="ot">&lt;-</span> X[i<span class="dv">-1</span>, <span class="dv">2</span>]</span>
+<span id="cb41-9"><a href="#cb41-9" tabindex="-1"></a>m1 <span class="ot">&lt;-</span> mu[<span class="dv">1</span>] <span class="sc">+</span> rho <span class="sc">*</span> (x2 <span class="sc">-</span> mu[<span class="dv">2</span>]) <span class="sc">*</span> Sigma[<span class="dv">1</span>]<span class="sc">/</span>Sigma[<span class="dv">2</span>]</span>
+<span id="cb41-10"><a href="#cb41-10" tabindex="-1"></a>X[i, <span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1</span>, m1, s[<span class="dv">1</span>])</span>
+<span id="cb41-11"><a href="#cb41-11" tabindex="-1"></a>x1 <span class="ot">&lt;-</span> X[i, <span class="dv">1</span>]</span>
+<span id="cb41-12"><a href="#cb41-12" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> mu[<span class="dv">2</span>] <span class="sc">+</span> rho <span class="sc">*</span> (x1 <span class="sc">-</span> mu[<span class="dv">1</span>]) <span class="sc">*</span> Sigma[<span class="dv">2</span>]<span class="sc">/</span>Sigma[<span class="dv">1</span>]</span>
+<span id="cb41-13"><a href="#cb41-13" tabindex="-1"></a>X[i, <span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1</span>, m2, s[<span class="dv">2</span>])</span>
+<span id="cb41-14"><a href="#cb41-14" tabindex="-1"></a>}</span>
+<span id="cb41-15"><a href="#cb41-15" tabindex="-1"></a>b <span class="ot">&lt;-</span> burn <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb41-16"><a href="#cb41-16" tabindex="-1"></a>x <span class="ot">&lt;-</span> X[b<span class="sc">:</span>N, ]</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" tabindex="-1"></a><span class="fu">plot</span>(x[,<span class="dv">1</span>],<span class="at">type=</span><span class="st">&#39;l&#39;</span>,<span class="at">col=</span><span class="dv">1</span>,<span class="at">lwd=</span><span class="dv">2</span>,<span class="at">xlab=</span><span class="st">&#39;Index&#39;</span>,<span class="at">ylab=</span><span class="st">&#39;Random numbers&#39;</span>)</span>
+<span id="cb42-2"><a href="#cb42-2" tabindex="-1"></a><span class="fu">lines</span>(x[,<span class="dv">2</span>],<span class="at">col=</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb42-3"><a href="#cb42-3" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">&#39;bottomright&#39;</span>,<span class="fu">c</span>(<span class="fu">expression</span>(X[<span class="dv">1</span>]),<span class="fu">expression</span>(X[<span class="dv">2</span>])),<span class="at">col=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>,<span class="at">lwd=</span><span class="dv">2</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" tabindex="-1"></a>Y <span class="ot">&lt;-</span> x[,<span class="dv">2</span>];X <span class="ot">&lt;-</span> x[,<span class="dv">1</span>]</span>
+<span id="cb43-2"><a href="#cb43-2" tabindex="-1"></a>d1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(Y<span class="sc">~</span>X)</span>
+<span id="cb43-3"><a href="#cb43-3" tabindex="-1"></a>d1<span class="sc">$</span>coefficients</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" tabindex="-1"></a><span class="fu">qqnorm</span>(d1<span class="sc">$</span>residuals)</span>
+<span id="cb44-2"><a href="#cb44-2" tabindex="-1"></a><span class="fu">qqline</span>(d1<span class="sc">$</span>residuals)</span></code></pre></div>
+<p>从QQ图可以看出,模型的残差符合正态假设.</p>
+</div>
+<div id="question-26" class="section level2">
+<h2>Question</h2>
+<p>ex 9.10 Refer to Example 9.1. Use the Gelman-Rubin method to monitor
+convergence of the chain, and run the chain until the chain has
+converged approximately to the target distribution according to <span class="math inline">\(\hat R\)</span> &lt; 1.2.</p>
+</div>
+<div id="answer-26" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" tabindex="-1"></a>Gelman.Rubin <span class="ot">&lt;-</span> <span class="cf">function</span>(psi) {</span>
+<span id="cb45-2"><a href="#cb45-2" tabindex="-1"></a>  psi <span class="ot">&lt;-</span> <span class="fu">as.matrix</span>(psi)</span>
+<span id="cb45-3"><a href="#cb45-3" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">ncol</span>(psi)</span>
+<span id="cb45-4"><a href="#cb45-4" tabindex="-1"></a>  k <span class="ot">&lt;-</span> <span class="fu">nrow</span>(psi)</span>
+<span id="cb45-5"><a href="#cb45-5" tabindex="-1"></a>  psi.means <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(psi)     </span>
+<span id="cb45-6"><a href="#cb45-6" tabindex="-1"></a>  B <span class="ot">&lt;-</span> n <span class="sc">*</span> <span class="fu">var</span>(psi.means)        </span>
+<span id="cb45-7"><a href="#cb45-7" tabindex="-1"></a>  psi.w <span class="ot">&lt;-</span> <span class="fu">apply</span>(psi, <span class="dv">1</span>, <span class="st">&quot;var&quot;</span>)  </span>
+<span id="cb45-8"><a href="#cb45-8" tabindex="-1"></a>  W <span class="ot">&lt;-</span> <span class="fu">mean</span>(psi.w)               </span>
+<span id="cb45-9"><a href="#cb45-9" tabindex="-1"></a>  v.hat <span class="ot">&lt;-</span> W<span class="sc">*</span>(n<span class="dv">-1</span>)<span class="sc">/</span>n <span class="sc">+</span> (B<span class="sc">/</span>n)     </span>
+<span id="cb45-10"><a href="#cb45-10" tabindex="-1"></a>  r.hat <span class="ot">&lt;-</span> v.hat <span class="sc">/</span> W      </span>
+<span id="cb45-11"><a href="#cb45-11" tabindex="-1"></a>  <span class="fu">return</span>(r.hat)</span>
+<span id="cb45-12"><a href="#cb45-12" tabindex="-1"></a>}</span>
+<span id="cb45-13"><a href="#cb45-13" tabindex="-1"></a>  </span>
+<span id="cb45-14"><a href="#cb45-14" tabindex="-1"></a>dR <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb45-15"><a href="#cb45-15" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">any</span>(x <span class="sc">&lt;</span> <span class="dv">0</span>)) <span class="fu">return</span> (<span class="dv">0</span>)</span>
+<span id="cb45-16"><a href="#cb45-16" tabindex="-1"></a>  <span class="fu">return</span>((x <span class="sc">/</span> <span class="dv">4</span><span class="sc">^</span><span class="dv">2</span>) <span class="sc">*</span> <span class="fu">exp</span>(<span class="sc">-</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">/</span> (<span class="dv">2</span><span class="sc">*</span><span class="dv">4</span><span class="sc">^</span><span class="dv">2</span>)))</span>
+<span id="cb45-17"><a href="#cb45-17" tabindex="-1"></a>}</span>
+<span id="cb45-18"><a href="#cb45-18" tabindex="-1"></a></span>
+<span id="cb45-19"><a href="#cb45-19" tabindex="-1"></a>Rayleigh.chain <span class="ot">&lt;-</span> <span class="cf">function</span>(sigma, x0, N){</span>
+<span id="cb45-20"><a href="#cb45-20" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">numeric</span>(N)</span>
+<span id="cb45-21"><a href="#cb45-21" tabindex="-1"></a>  x[<span class="dv">1</span>] <span class="ot">&lt;-</span> x0</span>
+<span id="cb45-22"><a href="#cb45-22" tabindex="-1"></a>  u <span class="ot">&lt;-</span> <span class="fu">runif</span>(N)</span>
+<span id="cb45-23"><a href="#cb45-23" tabindex="-1"></a>  k <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb45-24"><a href="#cb45-24" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>N) {</span>
+<span id="cb45-25"><a href="#cb45-25" tabindex="-1"></a>    y <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1</span>, x[i<span class="dv">-1</span>], sigma)</span>
+<span id="cb45-26"><a href="#cb45-26" tabindex="-1"></a>    <span class="cf">if</span> (u[i] <span class="sc">&gt;</span> (<span class="fu">dR</span>(y)<span class="sc">/</span><span class="fu">dR</span>(x[i<span class="dv">-1</span>])))</span>
+<span id="cb45-27"><a href="#cb45-27" tabindex="-1"></a>      x[i] <span class="ot">&lt;-</span> x[i<span class="dv">-1</span>]</span>
+<span id="cb45-28"><a href="#cb45-28" tabindex="-1"></a>    <span class="cf">else</span> {</span>
+<span id="cb45-29"><a href="#cb45-29" tabindex="-1"></a>      x[i] <span class="ot">&lt;-</span> y</span>
+<span id="cb45-30"><a href="#cb45-30" tabindex="-1"></a>    }</span>
+<span id="cb45-31"><a href="#cb45-31" tabindex="-1"></a>  }</span>
+<span id="cb45-32"><a href="#cb45-32" tabindex="-1"></a>  x</span>
+<span id="cb45-33"><a href="#cb45-33" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" tabindex="-1"></a>sigma <span class="ot">&lt;-</span> <span class="dv">1</span>; k <span class="ot">&lt;-</span> <span class="dv">4</span>; n <span class="ot">&lt;-</span> <span class="dv">15000</span>; b <span class="ot">&lt;-</span> <span class="dv">1000</span></span>
+<span id="cb46-2"><a href="#cb46-2" tabindex="-1"></a>x0 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">20</span>)</span>
+<span id="cb46-3"><a href="#cb46-3" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, <span class="at">nrow=</span>k, <span class="at">ncol=</span>n)</span>
+<span id="cb46-4"><a href="#cb46-4" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>k){</span>
+<span id="cb46-5"><a href="#cb46-5" tabindex="-1"></a>  X[i, ] <span class="ot">&lt;-</span> <span class="fu">Rayleigh.chain</span>(sigma, x0[i], n)</span>
+<span id="cb46-6"><a href="#cb46-6" tabindex="-1"></a>}</span>
+<span id="cb46-7"><a href="#cb46-7" tabindex="-1"></a>psi <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">apply</span>(X, <span class="dv">1</span>, cumsum))</span>
+<span id="cb46-8"><a href="#cb46-8" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(psi))</span>
+<span id="cb46-9"><a href="#cb46-9" tabindex="-1"></a>  psi[i,] <span class="ot">&lt;-</span> psi[i,] <span class="sc">/</span> (<span class="dv">1</span><span class="sc">:</span><span class="fu">ncol</span>(psi))</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" tabindex="-1"></a>rhat <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">0</span>, n)</span>
+<span id="cb47-2"><a href="#cb47-2" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> (b<span class="sc">+</span><span class="dv">1</span>)<span class="sc">:</span>n)</span>
+<span id="cb47-3"><a href="#cb47-3" tabindex="-1"></a>  rhat[j] <span class="ot">&lt;-</span> <span class="fu">Gelman.Rubin</span>(psi[,<span class="dv">1</span><span class="sc">:</span>j])</span>
+<span id="cb47-4"><a href="#cb47-4" tabindex="-1"></a><span class="fu">plot</span>(rhat[(b<span class="sc">+</span><span class="dv">1</span>)<span class="sc">:</span>n], <span class="at">type=</span><span class="st">&quot;l&quot;</span>, <span class="at">xlab=</span><span class="st">&quot;&quot;</span>, <span class="at">ylab=</span><span class="st">&quot;R&quot;</span>)</span>
+<span id="cb47-5"><a href="#cb47-5" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="fl">1.2</span>, <span class="at">lty=</span><span class="dv">2</span>)</span></code></pre></div>
+<p>从结果中可以看到去掉预烧期后链的收敛就已经较好.</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fu">mcmc.list</span>(<span class="fu">mcmc</span>(X[<span class="dv">1</span>,]), <span class="fu">mcmc</span>(X[<span class="dv">2</span>,]), <span class="fu">mcmc</span>(X[<span class="dv">3</span>,]), <span class="fu">mcmc</span>(X[<span class="dv">4</span>,]))</span>
+<span id="cb48-2"><a href="#cb48-2" tabindex="-1"></a><span class="fu">gelman.diag</span>(y)</span></code></pre></div>
+<p>用coda包的得到的结果也说明链收敛的较好.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" tabindex="-1"></a><span class="fu">library</span>(boot)</span></code></pre></div>
+</div>
+<div id="question-27" class="section level2">
+<h2>Question</h2>
+<p><span class="math inline">\(X_1,\cdots,X_n服从Exp(\lambda).观测值为(u_i,v_i)\)</span><br />
+<span class="math inline">\((1)分别用极大化似然和EM算法求解\lambda的MLE,证明算法收敛于观测数据的MLE,且有线性收敛速度.\)</span><br />
+<span class="math inline">\((2)观测值分别为(11,12),(8,9),(27,28),(13,14),(16,17),(0,1),(23,24),(10,11),(24,25),(2,3),变成实现上述方法的数值解.\)</span></p>
+</div>
+<div id="answer-27" class="section level2">
+<h2>Answer</h2>
+<ol style="list-style-type: decimal">
+<li><p><span class="math inline">\(L(\lambda|u_i,v_i)=\Pi_{i=1}^nP_{\lambda}(u_i\leq
+X_i\leq v_i)=\Pi_{i=1}^n(e^{-\lambda u_i}-e^{-\lambda
+v_i})\)</span><br />
+<span class="math inline">\(l(\lambda|u_i,v_i)=\sum_{i=1}^n[-\lambda
+u_i+\log(1-e^{\lambda(u_i-v_i)})]\)</span> <span class="math inline">\(l^\prime(\lambda|u_i,v_i)=\sum_{i=1}^n[-u_i+\frac{(u_i-v_i)\exp(\lambda(u_i-v_i))}{\exp(\lambda(u_i-v_i))-1}]\)</span><br />
+<span class="math inline">\(直接极大化似然函数即l^\prime(\lambda)=0的解\)</span><br />
+<span class="math inline">\(假设真实数据为X^{(m)}=(X^{(m)}_1,\cdots,X^{(m)}_n)\)</span><br />
+<span class="math inline">\(则l(\lambda|u_i,v_i,X^{(m)})=n\log(\lambda)-\lambda\sum_{i=1}^n
+x^{(m)}_i\)</span><br />
+<span class="math inline">\(E_{\lambda_0}[l(\lambda|u_i,v_i,X^{(m)})|u_i,v_i]=n\log(\lambda)-\lambda\sum_{i=1}^n[u_i+\frac{1}{\hat{\lambda_0}}-\frac{(u_i-v_i)\exp(\hat{\lambda_0}(u_i-v_i))}{\exp(\hat{\lambda_0}(u_i-v_i))-1}]\)</span><br />
+<span class="math inline">\(可知\hat{\lambda_1}=\frac{n}{\sum_{i=1}^n[u_i+\frac{1}{\hat{\lambda_0}}-\frac{(u_i-v_i)\exp(\hat{\lambda_0}(u_i-v_i))}{\exp(\hat{\lambda_0}(u_i-v_i))-1}]}\)</span><br />
+<span class="math inline">\(将上面的\hat{\lambda_0}和\hat{\lambda_1}均替换成\lambda.则可知收敛值应满足与直接极大化似然函数求导后相同的结果，因此EM算法收敛到观测数据的MLE\)</span><br />
+<span class="math inline">\(记f(x)=\frac{n}{\sum_{i=1}^n[u_i+\frac{1}{x}-\frac{(u_i-v_i)\exp(x(u_i-v_i))}{\exp(x(u_i-v_i))-1}]}\)</span>
+<span class="math inline">\(则f^\prime(\lambda_{\infty})=1-n^{-1}\lambda_{\infty}^2\sum_{i=1}^n\frac{(u_i-v_i)^2\exp(\lambda_{\infty}(u_i-v_i))}{(\exp(\lambda_{\infty}(u_i-v_i)))^2},即0&lt;f^\prime(\lambda_{\infty})&lt;1,因此具有线性收敛速度.\)</span></p></li>
+<li><p>注意到观测到的数据均为<span class="math inline">\(u_i-v_i=-1\)</span>,<br />
+<span class="math inline">\(l^\prime(\lambda|u_i,v_i)=-\sum_{i=1}^nu_i-\frac{n\exp(-\lambda)}{\exp(-\lambda)-1}\)</span></p></li>
+</ol>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">11</span>,<span class="dv">8</span>,<span class="dv">27</span>,<span class="dv">13</span>,<span class="dv">16</span>,<span class="dv">0</span>,<span class="dv">23</span>,<span class="dv">10</span>,<span class="dv">24</span>,<span class="dv">2</span>)</span>
+<span id="cb50-2"><a href="#cb50-2" tabindex="-1"></a>t <span class="ot">&lt;-</span> <span class="fu">sum</span>(u)</span>
+<span id="cb50-3"><a href="#cb50-3" tabindex="-1"></a>f <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="sc">-</span>t<span class="dv">-10</span><span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>x)<span class="sc">/</span>(<span class="fu">exp</span>(<span class="sc">-</span>x)<span class="sc">-</span><span class="dv">1</span>)</span>
+<span id="cb50-4"><a href="#cb50-4" tabindex="-1"></a>s1 <span class="ot">&lt;-</span> <span class="fu">uniroot</span>(f, <span class="at">interval =</span> <span class="fu">c</span>(<span class="fl">0.0001</span>,<span class="dv">10</span>))</span>
+<span id="cb50-5"><a href="#cb50-5" tabindex="-1"></a>s1<span class="sc">$</span>root</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" tabindex="-1"></a>lambda0 <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb51-2"><a href="#cb51-2" tabindex="-1"></a>lambda1 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb51-3"><a href="#cb51-3" tabindex="-1"></a>k <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb51-4"><a href="#cb51-4" tabindex="-1"></a><span class="cf">while</span> (lambda1 <span class="sc">-</span> lambda0 <span class="sc">&gt;</span> <span class="fl">0.00001</span> <span class="sc">|</span> k<span class="sc">&lt;</span><span class="dv">10000</span>) {</span>
+<span id="cb51-5"><a href="#cb51-5" tabindex="-1"></a>  lambda0 <span class="ot">&lt;-</span> lambda1</span>
+<span id="cb51-6"><a href="#cb51-6" tabindex="-1"></a>  lambda1 <span class="ot">&lt;-</span> <span class="dv">10</span><span class="sc">/</span>(t<span class="sc">+</span><span class="dv">10</span><span class="sc">/</span>lambda0<span class="sc">+</span><span class="dv">10</span><span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>lambda0)<span class="sc">/</span>(<span class="fu">exp</span>(<span class="sc">-</span>lambda0)<span class="sc">-</span><span class="dv">1</span>))</span>
+<span id="cb51-7"><a href="#cb51-7" tabindex="-1"></a>    k <span class="ot">&lt;-</span> k<span class="sc">+</span><span class="dv">1</span></span>
+<span id="cb51-8"><a href="#cb51-8" tabindex="-1"></a>}</span>
+<span id="cb51-9"><a href="#cb51-9" tabindex="-1"></a>lambda1</span></code></pre></div>
+<p>从上面两种方法来看直接求解和利用EM算法求解的结果是一致的.</p>
+</div>
+<div id="question-28" class="section level2">
+<h2>Question</h2>
+<p>ex 11.8<br />
+In the Morra game, the set of optimal strategies are not changed if a
+constant is subtracted from every entry of the payoff matrix, or a
+positive constant is multiplied times every entry of the payoff matrix.
+However, the simplex algorithm may terminate at a different basic
+feasible point (also optimal). Compute B &lt;- A + 2, find the solution
+of game B, and verify that it is one of the extreme points
+(11.12)–(11.15) of the original game A. Also find the value of game A
+and game B</p>
+</div>
+<div id="answer-28" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" tabindex="-1"></a>solve.game <span class="ot">&lt;-</span> <span class="cf">function</span>(A) {</span>
+<span id="cb52-2"><a href="#cb52-2" tabindex="-1"></a>min.A <span class="ot">&lt;-</span> <span class="fu">min</span>(A)</span>
+<span id="cb52-3"><a href="#cb52-3" tabindex="-1"></a>A <span class="ot">&lt;-</span> A <span class="sc">-</span> min.A </span>
+<span id="cb52-4"><a href="#cb52-4" tabindex="-1"></a>max.A <span class="ot">&lt;-</span> <span class="fu">max</span>(A)</span>
+<span id="cb52-5"><a href="#cb52-5" tabindex="-1"></a>A <span class="ot">&lt;-</span> A <span class="sc">/</span> <span class="fu">max</span>(A)</span>
+<span id="cb52-6"><a href="#cb52-6" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">nrow</span>(A)</span>
+<span id="cb52-7"><a href="#cb52-7" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">ncol</span>(A)</span>
+<span id="cb52-8"><a href="#cb52-8" tabindex="-1"></a>it <span class="ot">&lt;-</span> n<span class="sc">^</span><span class="dv">3</span></span>
+<span id="cb52-9"><a href="#cb52-9" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">0</span>, m), <span class="dv">1</span>) </span>
+<span id="cb52-10"><a href="#cb52-10" tabindex="-1"></a>A1 <span class="ot">&lt;-</span> <span class="sc">-</span><span class="fu">cbind</span>(<span class="fu">t</span>(A), <span class="fu">rep</span>(<span class="sc">-</span><span class="dv">1</span>, n)) </span>
+<span id="cb52-11"><a href="#cb52-11" tabindex="-1"></a>b1 <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">0</span>, n)</span>
+<span id="cb52-12"><a href="#cb52-12" tabindex="-1"></a>A3 <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">as.matrix</span>(<span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, m), <span class="dv">0</span>))) </span>
+<span id="cb52-13"><a href="#cb52-13" tabindex="-1"></a>b3 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb52-14"><a href="#cb52-14" tabindex="-1"></a>sx <span class="ot">&lt;-</span> <span class="fu">simplex</span>(<span class="at">a=</span>a, <span class="at">A1=</span>A1, <span class="at">b1=</span>b1, <span class="at">A3=</span>A3, <span class="at">b3=</span>b3,</span>
+<span id="cb52-15"><a href="#cb52-15" tabindex="-1"></a><span class="at">maxi=</span><span class="cn">TRUE</span>, <span class="at">n.iter=</span>it)</span>
+<span id="cb52-16"><a href="#cb52-16" tabindex="-1"></a></span>
+<span id="cb52-17"><a href="#cb52-17" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">0</span>, n), <span class="dv">1</span>) </span>
+<span id="cb52-18"><a href="#cb52-18" tabindex="-1"></a>A1 <span class="ot">&lt;-</span> <span class="fu">cbind</span>(A, <span class="fu">rep</span>(<span class="sc">-</span><span class="dv">1</span>, m)) </span>
+<span id="cb52-19"><a href="#cb52-19" tabindex="-1"></a>b1 <span class="ot">&lt;-</span> <span class="fu">rep</span>(<span class="dv">0</span>, m)</span>
+<span id="cb52-20"><a href="#cb52-20" tabindex="-1"></a>A3 <span class="ot">&lt;-</span> <span class="fu">t</span>(<span class="fu">as.matrix</span>(<span class="fu">c</span>(<span class="fu">rep</span>(<span class="dv">1</span>, n), <span class="dv">0</span>))) </span>
+<span id="cb52-21"><a href="#cb52-21" tabindex="-1"></a>b3 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb52-22"><a href="#cb52-22" tabindex="-1"></a>sy <span class="ot">&lt;-</span> <span class="fu">simplex</span>(<span class="at">a=</span>a, <span class="at">A1=</span>A1, <span class="at">b1=</span>b1, <span class="at">A3=</span>A3, <span class="at">b3=</span>b3,</span>
+<span id="cb52-23"><a href="#cb52-23" tabindex="-1"></a><span class="at">maxi=</span><span class="cn">FALSE</span>, <span class="at">n.iter=</span>it)</span>
+<span id="cb52-24"><a href="#cb52-24" tabindex="-1"></a>soln <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">&quot;A&quot;</span> <span class="ot">=</span> A <span class="sc">*</span> max.A <span class="sc">+</span> min.A,</span>
+<span id="cb52-25"><a href="#cb52-25" tabindex="-1"></a><span class="st">&quot;x&quot;</span> <span class="ot">=</span> sx<span class="sc">$</span>soln[<span class="dv">1</span><span class="sc">:</span>m],</span>
+<span id="cb52-26"><a href="#cb52-26" tabindex="-1"></a><span class="st">&quot;y&quot;</span> <span class="ot">=</span> sy<span class="sc">$</span>soln[<span class="dv">1</span><span class="sc">:</span>n],</span>
+<span id="cb52-27"><a href="#cb52-27" tabindex="-1"></a><span class="st">&quot;v&quot;</span> <span class="ot">=</span> sx<span class="sc">$</span>soln[m<span class="sc">+</span><span class="dv">1</span>] <span class="sc">*</span> max.A <span class="sc">+</span> min.A)</span>
+<span id="cb52-28"><a href="#cb52-28" tabindex="-1"></a>soln</span>
+<span id="cb52-29"><a href="#cb52-29" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" tabindex="-1"></a>A <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>( <span class="dv">0</span>,<span class="sc">-</span><span class="dv">2</span>,<span class="sc">-</span><span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">4</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb53-2"><a href="#cb53-2" tabindex="-1"></a>               <span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="sc">-</span><span class="dv">3</span>,<span class="sc">-</span><span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">0</span>,<span class="dv">0</span>,</span>
+<span id="cb53-3"><a href="#cb53-3" tabindex="-1"></a>               <span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="sc">-</span><span class="dv">4</span>,<span class="sc">-</span><span class="dv">4</span>,</span>
+<span id="cb53-4"><a href="#cb53-4" tabindex="-1"></a>               <span class="sc">-</span><span class="dv">3</span>,<span class="dv">0</span>,<span class="sc">-</span><span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">4</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">0</span>,</span>
+<span id="cb53-5"><a href="#cb53-5" tabindex="-1"></a>               <span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="sc">-</span><span class="dv">4</span>,<span class="dv">0</span>,<span class="sc">-</span><span class="dv">4</span>,<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">0</span>,</span>
+<span id="cb53-6"><a href="#cb53-6" tabindex="-1"></a>               <span class="dv">0</span>,<span class="dv">3</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">4</span>,<span class="dv">0</span>,<span class="sc">-</span><span class="dv">5</span>,<span class="dv">0</span>,<span class="sc">-</span><span class="dv">5</span>,</span>
+<span id="cb53-7"><a href="#cb53-7" tabindex="-1"></a>               <span class="sc">-</span><span class="dv">4</span>,<span class="sc">-</span><span class="dv">4</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">5</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">6</span>,</span>
+<span id="cb53-8"><a href="#cb53-8" tabindex="-1"></a>               <span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">4</span>,<span class="sc">-</span><span class="dv">5</span>,<span class="sc">-</span><span class="dv">5</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">6</span>,</span>
+<span id="cb53-9"><a href="#cb53-9" tabindex="-1"></a>               <span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">4</span>,<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">5</span>,<span class="sc">-</span><span class="dv">6</span>,<span class="sc">-</span><span class="dv">6</span>,<span class="dv">0</span>), <span class="dv">9</span>, <span class="dv">9</span>)</span>
+<span id="cb53-10"><a href="#cb53-10" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">solve.game</span>(A<span class="sc">+</span><span class="dv">3</span>)</span>
+<span id="cb53-11"><a href="#cb53-11" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">cbind</span>(s<span class="sc">$</span>x, s<span class="sc">$</span>y), <span class="dv">7</span>)</span></code></pre></div>
+<p>从结果可以看出在将A替换成A+3后结果依然是(0, 0, 25/61, 0, 20/61, 0,
+16/61, 0, 0)的形式.</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" tabindex="-1"></a>s2 <span class="ot">&lt;-</span> <span class="fu">solve.game</span>(A)</span>
+<span id="cb54-2"><a href="#cb54-2" tabindex="-1"></a><span class="fu">rbind</span>(<span class="at">A =</span> s2<span class="sc">$</span>v,<span class="at">B =</span> s<span class="sc">$</span>v)</span></code></pre></div>
+<p>游戏A的value为0;将收益+3后,游戏B的收益相应的变为了3.</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" tabindex="-1"></a><span class="fu">library</span>(Rcpp)</span>
+<span id="cb55-2"><a href="#cb55-2" tabindex="-1"></a><span class="fu">library</span>(microbenchmark)</span></code></pre></div>
+</div>
+<div id="question-29" class="section level2">
+<h2>Question</h2>
+<p>2.1.3 Exercise 4 Why do you need to use unlist() to convert a list to
+an atomic vector? Why doesn’t as.vector() work?</p>
+</div>
+<div id="answer-29" class="section level2">
+<h2>Answer</h2>
+<p>将列表转换成向量可以进行向量方面的处理;as.vector函数是将矩阵转换成向量,元素是数,但列表里面的元素更复杂且长度不一定一致.</p>
+</div>
+<div id="question-30" class="section level2">
+<h2>Question</h2>
+<p>2.3.1 Exercise 1<br />
+What does dim() return when applied to a vector?</p>
+</div>
+<div id="answer-30" class="section level2">
+<h2>Answer</h2>
+<p>NULL</p>
+</div>
+<div id="question-31" class="section level2">
+<h2>Question</h2>
+<p>2.3.1 Exercise 2<br />
+If is.matrix(x) is TRUE, what will is.array(x) return?</p>
+</div>
+<div id="answer-31" class="section level2">
+<h2>Answer</h2>
+<p>TRUE</p>
+</div>
+<div id="question-32" class="section level2">
+<h2>Question</h2>
+<p>2.4.5 Exercise 2<br />
+What does as.matrix() do when applied to a data frame with columns of
+different types?</p>
+</div>
+<div id="answer-32" class="section level2">
+<h2>Answer</h2>
+<p>所有的列都会转换成同一种数据类型.</p>
+</div>
+<div id="question-33" class="section level2">
+<h2>Question</h2>
+<p>2.4.5 Exercise 3<br />
+Can you have a data frame with 0 rows? What about 0 columns?</p>
+</div>
+<div id="answer-33" class="section level2">
+<h2>Answer</h2>
+</div>
+<div id="行" class="section level2">
+<h2>0行</h2>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">1</span>), <span class="at">z =</span> <span class="fu">c</span>(<span class="dv">1</span>))</span>
+<span id="cb56-2"><a href="#cb56-2" tabindex="-1"></a>d <span class="ot">&lt;-</span> d[<span class="sc">-</span><span class="dv">1</span>,]</span>
+<span id="cb56-3"><a href="#cb56-3" tabindex="-1"></a>d</span></code></pre></div>
+</div>
+<div id="列" class="section level2">
+<h2>0列</h2>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>))</span>
+<span id="cb57-2"><a href="#cb57-2" tabindex="-1"></a>d <span class="ot">&lt;-</span> d[,<span class="sc">-</span><span class="dv">1</span>]</span>
+<span id="cb57-3"><a href="#cb57-3" tabindex="-1"></a>d</span></code></pre></div>
+</div>
+<div id="question-34" class="section level2">
+<h2>Question</h2>
+<p>11.1.2 Exercise 2<br />
+Can you have a data frame with 0 rows? What about 0 columns?</p>
+</div>
+<div id="answer-34" class="section level2">
+<h2>Answer</h2>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" tabindex="-1"></a>scale01 <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
+<span id="cb58-2"><a href="#cb58-2" tabindex="-1"></a>  rng <span class="ot">&lt;-</span> <span class="fu">range</span>(x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb58-3"><a href="#cb58-3" tabindex="-1"></a>  (x <span class="sc">-</span> rng[<span class="dv">1</span>]) <span class="sc">/</span> (rng[<span class="dv">2</span>] <span class="sc">-</span> rng[<span class="dv">1</span>])</span>
+<span id="cb58-4"><a href="#cb58-4" tabindex="-1"></a>}</span></code></pre></div>
+<p>应用到每一列</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" tabindex="-1"></a>d1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">6</span>))   </span>
+<span id="cb59-2"><a href="#cb59-2" tabindex="-1"></a><span class="fu">lapply</span>(d1, scale01)</span></code></pre></div>
+<p>应用到每一数值的列</p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" tabindex="-1"></a>d2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">6</span>), <span class="at">z =</span> <span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>))</span>
+<span id="cb60-2"><a href="#cb60-2" tabindex="-1"></a><span class="fu">lapply</span>(d2[,<span class="fu">which</span>(<span class="fu">unlist</span>(<span class="fu">lapply</span>(d2, is.numeric)))], scale01)   <span class="co">#对每一列先应用is.numeric函数,再对合适的列用scale01函数</span></span></code></pre></div>
+</div>
+<div id="question-35" class="section level2">
+<h2>Question</h2>
+<p>11.2.5 Exercise 1<br />
+Can you have a data frame with 0 rows? What about 0 columns?</p>
+</div>
+<div id="answer-35" class="section level2">
+<h2>Answer</h2>
+<p>应用到每一列</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" tabindex="-1"></a>d1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">6</span>))   </span>
+<span id="cb61-2"><a href="#cb61-2" tabindex="-1"></a><span class="fu">vapply</span>(d1, sd, <span class="fu">c</span>(<span class="at">sd =</span> <span class="dv">0</span>))</span></code></pre></div>
+<p>应用到每一数值的列</p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" tabindex="-1"></a>d2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">6</span>), <span class="at">z =</span> <span class="fu">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>))</span>
+<span id="cb62-2"><a href="#cb62-2" tabindex="-1"></a><span class="fu">vapply</span>(d2[,<span class="fu">which</span>(<span class="fu">unlist</span>(<span class="fu">vapply</span>(d2, is.numeric, <span class="fu">c</span>(<span class="at">sd=</span><span class="dv">0</span>)))<span class="sc">==</span><span class="dv">1</span>)], sd, <span class="fu">c</span>(<span class="at">sd=</span><span class="dv">0</span>))   <span class="co">#对每一列先应用is.numeric函数,再对合适的列用scale01函数</span></span></code></pre></div>
+</div>
+<div id="question-36" class="section level2">
+<h2>Question</h2>
+<p>对exercise 9.8分别编写r函数和rcpp函数比较速度</p>
+</div>
+<div id="answer-36" class="section level2">
+<h2>Answer</h2>
+<p>r function</p>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" tabindex="-1"></a>fr <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b, n, N){</span>
+<span id="cb63-2"><a href="#cb63-2" tabindex="-1"></a>  X <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">0</span>, N, <span class="dv">2</span>)</span>
+<span id="cb63-3"><a href="#cb63-3" tabindex="-1"></a>  X[<span class="dv">1</span>, ] <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span><span class="sc">/</span><span class="dv">2</span>)</span>
+<span id="cb63-4"><a href="#cb63-4" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>N) {</span>
+<span id="cb63-5"><a href="#cb63-5" tabindex="-1"></a>    y <span class="ot">&lt;-</span> X[i<span class="dv">-1</span>, <span class="dv">2</span>]</span>
+<span id="cb63-6"><a href="#cb63-6" tabindex="-1"></a>    X[i,<span class="dv">1</span>] <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(<span class="dv">1</span>, n, y)   <span class="co">#更新一个变量</span></span>
+<span id="cb63-7"><a href="#cb63-7" tabindex="-1"></a>    x <span class="ot">&lt;-</span> X[i,<span class="dv">1</span>]</span>
+<span id="cb63-8"><a href="#cb63-8" tabindex="-1"></a>    X[i,<span class="dv">2</span>] <span class="ot">&lt;-</span> <span class="fu">rbeta</span>(<span class="dv">1</span>, a, b)    <span class="co">#更新另一个变量</span></span>
+<span id="cb63-9"><a href="#cb63-9" tabindex="-1"></a>  }</span>
+<span id="cb63-10"><a href="#cb63-10" tabindex="-1"></a>  <span class="fu">return</span>(X)</span>
+<span id="cb63-11"><a href="#cb63-11" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" tabindex="-1"></a><span class="fu">cppFunction</span>(<span class="st">&#39;NumericMatrix fc(float a, float b, int n, int N){;</span></span>
+<span id="cb64-2"><a href="#cb64-2" tabindex="-1"></a><span class="st">            NumericMatrix X(N,2);</span></span>
+<span id="cb64-3"><a href="#cb64-3" tabindex="-1"></a><span class="st">            X[1,1] = 1;</span></span>
+<span id="cb64-4"><a href="#cb64-4" tabindex="-1"></a><span class="st">            X[1,2] = 1/2;</span></span>
+<span id="cb64-5"><a href="#cb64-5" tabindex="-1"></a><span class="st">            for(int i = 2; i &lt;= N; i++){</span></span>
+<span id="cb64-6"><a href="#cb64-6" tabindex="-1"></a><span class="st">              float y = X[i-1,2];</span></span>
+<span id="cb64-7"><a href="#cb64-7" tabindex="-1"></a><span class="st">              NumericVector x = rbinom(1, n, y); </span></span>
+<span id="cb64-8"><a href="#cb64-8" tabindex="-1"></a><span class="st">              X[i,1] = x[1];</span></span>
+<span id="cb64-9"><a href="#cb64-9" tabindex="-1"></a><span class="st">              NumericVector z = rbeta(1, a, b);</span></span>
+<span id="cb64-10"><a href="#cb64-10" tabindex="-1"></a><span class="st">              X[i,2] = z[1];</span></span>
+<span id="cb64-11"><a href="#cb64-11" tabindex="-1"></a><span class="st">            }</span></span>
+<span id="cb64-12"><a href="#cb64-12" tabindex="-1"></a><span class="st">            return(X);</span></span>
+<span id="cb64-13"><a href="#cb64-13" tabindex="-1"></a><span class="st">}&#39;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" tabindex="-1"></a>ts <span class="ot">&lt;-</span> <span class="fu">microbenchmark</span>(<span class="at">fR =</span> <span class="fu">fr</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">1000</span>), <span class="at">fC =</span> <span class="fu">fc</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">10</span>, <span class="dv">1000</span>))</span>
+<span id="cb65-2"><a href="#cb65-2" tabindex="-1"></a><span class="fu">summary</span>(ts)[,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>)]</span></code></pre></div>
+<p>从结果可以看出用cpp的时间大大减少.</p>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
